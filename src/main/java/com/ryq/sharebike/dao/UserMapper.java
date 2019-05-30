@@ -13,7 +13,7 @@ import java.util.List;
  */
 @Mapper
 public interface UserMapper extends CommnMapper<User>{
-    //登录
+    //登录(完成)
     User Login(@Param("User") User user);
     //注册
     int Register(@Param("User") User user);
