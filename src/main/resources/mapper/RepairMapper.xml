@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ryq.sharebike.dao.RepairMapper">
+    <!--List<Bike> findRepairRecord(@Param("bDate")Date bdate, @Param("eDate")Date edate),@Param("flag") int flag);-->
+    <select id="findRepairRecord" resultType="com.ryq.sharebike.pojo.RepairRecord">
+        select *
+        from repair_record
+        <where>
+            <if test="flag == 1">
+                <if test="bDate == null and eDate == null">
+                    finshDate is not null
+                </if>
+                <if test="bDate != null and eDate != null">
+                    finshDate between #{bDate} and #{eDate} and finshDate is not null
+                </if>
+                <if test="bDate != null and eDate == null">
+                    finshDate <![CDATA[ >= ]]> #{bDate}  and finshDate is not null
+                </if>
+                <if test="bDate == null and eDate != null">
+                    finshDate <![CDATA[ <= ]]> #{eDate}  and finshDate is not null
+                </if>
+            </if>
+            <if test="flag == 2">
+                <if test="bDate == null and eDate == null">
+                    finshDate is null
+                </if>
+                <if test="bDate != null and eDate != null">
+                    repairDate between #{bDate} and #{eDate} and finshDate is null
+                </if>
+                <if test="bDate != null and eDate == null">
+                    repairDate <![CDATA[ >= ]]> #{bDate} and finshDate is null
+                </if>
+                <if test="bDate == null and eDate != null">
+                    repairDate <![CDATA[ <= ]]> #{eDate} and finshDate is null
+                </if>
+            </if>
+        </where>
+    </select>
+    <!--int addFinshRepairRecord(@Param("userId") int userId,@Param("bikeId") int bikeId,@Param("date")Date date);-->
+    <insert id="addFinshRepairRecord">
+        UPDATE repair_record set finshDate = #{date} where userId = #{userId} and bikeId = #{bikeId} and finshDate is null
+    </insert>
+    <!--List<RepairRecord> findRepairIngByUserId(@Param("userId") int userId);-->
+    <select id="findRepairIngByUserId" resultType="com.ryq.sharebike.pojo.RepairRecord">
+        select * from repair_record where finshDate is null and userId = #{userId};
+    </select>
+    <!--int addBeginRepairRecord(@Param("userId") int userId,@Param("bikeId") int bikeId,@Param("date")Date date);-->
+    <insert id="addBeginRepairRecord">
+        insert into repair_record (userId, bikeId, repairDate) values (#{userId},#{bikeId},#{date});
+    </insert>
+</mapper>

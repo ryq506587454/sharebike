@@ -1,0 +1,551 @@
+2019-05-28 09:20:16.228  INFO 10740 --- [main] com.ryq.sharebike.SharebikeApplication   : Starting SharebikeApplication on 专属的G7 with PID 10740 (D:\idea_project\sharebike\target\classes started by 专属的G7 in D:\idea_project\sharebike)
+2019-05-28 09:20:16.259  INFO 10740 --- [main] com.ryq.sharebike.SharebikeApplication   : No active profile set, falling back to default profiles: default
+2019-05-28 09:20:16.806  WARN 10740 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:20:16.806  WARN 10740 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:20:16.806  WARN 10740 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:20:16.806  WARN 10740 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:20:16.806  WARN 10740 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 09:20:16.806  WARN 10740 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:20:16.806  WARN 10740 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:20:16.806  WARN 10740 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:20:16.806  WARN 10740 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:20:16.806  WARN 10740 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 09:20:17.103  INFO 10740 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2019-05-28 09:20:17.118  INFO 10740 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-28 09:20:17.118  INFO 10740 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-05-28 09:20:17.196  INFO 10740 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-28 09:20:17.196  INFO 10740 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 890 ms
+2019-05-28 09:20:17.614  INFO 10740 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 09:20:17.692  WARN 10740 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 09:20:17.707  INFO 10740 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-05-28 09:20:17.801  INFO 10740 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2019-05-28 09:20:17.801  INFO 10740 --- [main] com.ryq.sharebike.SharebikeApplication   : Started SharebikeApplication in 1.901 seconds (JVM running for 2.857)
+2019-05-28 09:20:22.115  INFO 10740 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-28 09:20:22.115  INFO 10740 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-28 09:20:22.146  INFO 10740 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 31 ms
+2019-05-28 09:20:29.107  INFO 10740 --- [http-nio-8090-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-28 09:20:29.440  INFO 10740 --- [http-nio-8090-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-28 09:38:52.365  INFO 3872 --- [main] com.ryq.sharebike.UserBusTEST            : Starting UserBusTEST on 专属的G7 with PID 3872 (started by 专属的G7 in D:\idea_project\sharebike)
+2019-05-28 09:38:52.365  INFO 3872 --- [main] com.ryq.sharebike.UserBusTEST            : No active profile set, falling back to default profiles: default
+2019-05-28 09:38:53.005  WARN 3872 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:38:53.005  WARN 3872 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:38:53.005  WARN 3872 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:38:53.005  WARN 3872 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:38:53.005  WARN 3872 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 09:38:53.021  WARN 3872 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:38:53.021  WARN 3872 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:38:53.021  WARN 3872 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:38:53.021  WARN 3872 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:38:53.021  WARN 3872 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 09:38:54.177  INFO 3872 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 09:38:54.365  WARN 3872 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 09:38:54.396  INFO 3872 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-05-28 09:38:54.615  INFO 3872 --- [main] com.ryq.sharebike.UserBusTEST            : Started UserBusTEST in 2.641 seconds (JVM running for 3.936)
+2019-05-28 09:38:55.083  INFO 3872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-28 09:38:55.224  INFO 3872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-28 09:38:55.349  INFO 3872 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-28 09:38:55.349  INFO 3872 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-28 09:38:55.427  INFO 3872 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-05-28 09:39:20.020  INFO 4356 --- [main] com.ryq.sharebike.UserBusTEST            : Starting UserBusTEST on 专属的G7 with PID 4356 (started by 专属的G7 in D:\idea_project\sharebike)
+2019-05-28 09:39:20.036  INFO 4356 --- [main] com.ryq.sharebike.UserBusTEST            : No active profile set, falling back to default profiles: default
+2019-05-28 09:39:20.739  WARN 4356 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:39:20.739  WARN 4356 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:39:20.739  WARN 4356 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:39:20.739  WARN 4356 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:39:20.739  WARN 4356 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 09:39:20.755  WARN 4356 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:39:20.755  WARN 4356 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:39:20.755  WARN 4356 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:39:20.755  WARN 4356 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:39:20.755  WARN 4356 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 09:39:21.911  INFO 4356 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 09:39:22.099  WARN 4356 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 09:39:22.130  INFO 4356 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-05-28 09:39:22.333  INFO 4356 --- [main] com.ryq.sharebike.UserBusTEST            : Started UserBusTEST in 2.719 seconds (JVM running for 3.652)
+2019-05-28 09:39:22.505  INFO 4356 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-28 09:39:22.677  INFO 4356 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-28 09:39:22.708  INFO 4356 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-28 09:39:22.708  INFO 4356 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-28 09:39:22.724  INFO 4356 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-05-28 09:39:35.371  INFO 4140 --- [main] com.ryq.sharebike.UserBusTEST            : Starting UserBusTEST on 专属的G7 with PID 4140 (started by 专属的G7 in D:\idea_project\sharebike)
+2019-05-28 09:39:35.371  INFO 4140 --- [main] com.ryq.sharebike.UserBusTEST            : No active profile set, falling back to default profiles: default
+2019-05-28 09:39:36.027  WARN 4140 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:39:36.027  WARN 4140 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:39:36.027  WARN 4140 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:39:36.027  WARN 4140 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:39:36.027  WARN 4140 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 09:39:36.043  WARN 4140 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:39:36.043  WARN 4140 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:39:36.043  WARN 4140 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:39:36.043  WARN 4140 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:39:36.043  WARN 4140 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 09:39:37.152  INFO 4140 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 09:39:37.340  WARN 4140 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 09:39:37.356  INFO 4140 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-05-28 09:39:37.574  INFO 4140 --- [main] com.ryq.sharebike.UserBusTEST            : Started UserBusTEST in 2.594 seconds (JVM running for 3.508)
+2019-05-28 09:39:37.746  INFO 4140 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-28 09:39:37.887  INFO 4140 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-28 09:39:38.387  INFO 4140 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-28 09:39:38.387  INFO 4140 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-28 09:39:38.387  INFO 4140 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-05-28 09:44:43.833  INFO 8208 --- [main] com.ryq.sharebike.UserBusTEST            : Starting UserBusTEST on 专属的G7 with PID 8208 (started by 专属的G7 in D:\idea_project\sharebike)
+2019-05-28 09:44:43.833  INFO 8208 --- [main] com.ryq.sharebike.UserBusTEST            : No active profile set, falling back to default profiles: default
+2019-05-28 09:44:44.551  WARN 8208 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:44:44.551  WARN 8208 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:44:44.551  WARN 8208 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:44:44.551  WARN 8208 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:44:44.551  WARN 8208 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 09:44:44.567  WARN 8208 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:44:44.567  WARN 8208 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:44:44.567  WARN 8208 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:44:44.567  WARN 8208 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:44:44.567  WARN 8208 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 09:44:45.730  INFO 8208 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 09:44:45.917  WARN 8208 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 09:44:45.949  INFO 8208 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-05-28 09:44:46.152  INFO 8208 --- [main] com.ryq.sharebike.UserBusTEST            : Started UserBusTEST in 2.725 seconds (JVM running for 3.699)
+2019-05-28 09:44:46.339  INFO 8208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-28 09:44:46.480  INFO 8208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-28 09:44:46.527  INFO 8208 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-28 09:44:46.527  INFO 8208 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-28 09:44:46.543  INFO 8208 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-05-28 09:44:50.748  INFO 232 --- [main] com.ryq.sharebike.SharebikeApplication   : Starting SharebikeApplication on 专属的G7 with PID 232 (D:\idea_project\sharebike\target\classes started by 专属的G7 in D:\idea_project\sharebike)
+2019-05-28 09:44:50.748  INFO 232 --- [main] com.ryq.sharebike.SharebikeApplication   : No active profile set, falling back to default profiles: default
+2019-05-28 09:44:51.248  WARN 232 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:44:51.248  WARN 232 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:44:51.248  WARN 232 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:44:51.248  WARN 232 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:44:51.248  WARN 232 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 09:44:51.263  WARN 232 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:44:51.263  WARN 232 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:44:51.263  WARN 232 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:44:51.263  WARN 232 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:44:51.263  WARN 232 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 09:44:51.545  INFO 232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2019-05-28 09:44:51.560  INFO 232 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-28 09:44:51.560  INFO 232 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-05-28 09:44:51.638  INFO 232 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-28 09:44:51.638  INFO 232 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 859 ms
+2019-05-28 09:44:52.076  INFO 232 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 09:44:52.154  WARN 232 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 09:44:52.154  INFO 232 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-05-28 09:44:52.263  INFO 232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2019-05-28 09:44:52.263  INFO 232 --- [main] com.ryq.sharebike.SharebikeApplication   : Started SharebikeApplication in 1.828 seconds (JVM running for 2.585)
+2019-05-28 09:44:56.450  INFO 232 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-28 09:44:56.450  INFO 232 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-28 09:44:56.454  INFO 232 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-05-28 09:45:06.105  INFO 232 --- [http-nio-8090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-28 09:45:06.181  INFO 232 --- [http-nio-8090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-28 09:45:16.632 ERROR 232 --- [http-nio-8090-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: argument type mismatch
+Controller [com.ryq.sharebike.controller.UserController]
+Method [public java.lang.String com.ryq.sharebike.controller.UserController.finshAppo(com.alibaba.fastjson.JSONObject,javax.servlet.http.HttpSession)] with argument values:
+ [0] [type=org.springframework.validation.support.BindingAwareModelMap] [value={}],
+[1] [type=org.apache.catalina.session.StandardSessionFacade] [value=org.apache.catalina.session.StandardSessionFacade@77d0f2f3] ] with root cause
+
+java.lang.IllegalArgumentException: argument type mismatch
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:889) ~[spring-webmvc-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:794) ~[spring-webmvc-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.2.0.M2.jar:5.2.0.M2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.2.0.M2.jar:5.2.0.M2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.19.jar:9.0.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.2.0.M2.jar:5.2.0.M2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.2.0.M2.jar:5.2.0.M2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.2.0.M2.jar:5.2.0.M2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.2.0.M2.jar:5.2.0.M2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200) ~[tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:836) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1747) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_181]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.19.jar:9.0.19]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
+
+2019-05-28 09:46:32.313  INFO 11952 --- [main] com.ryq.sharebike.SharebikeApplication   : Starting SharebikeApplication on 专属的G7 with PID 11952 (D:\idea_project\sharebike\target\classes started by 专属的G7 in D:\idea_project\sharebike)
+2019-05-28 09:46:32.316  INFO 11952 --- [main] com.ryq.sharebike.SharebikeApplication   : No active profile set, falling back to default profiles: default
+2019-05-28 09:46:32.795  WARN 11952 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:46:32.796  WARN 11952 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:46:32.796  WARN 11952 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:46:32.796  WARN 11952 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:46:32.796  WARN 11952 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 09:46:32.806  WARN 11952 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:46:32.806  WARN 11952 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:46:32.806  WARN 11952 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:46:32.807  WARN 11952 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:46:32.807  WARN 11952 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 09:46:33.094  INFO 11952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2019-05-28 09:46:33.108  INFO 11952 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-28 09:46:33.108  INFO 11952 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-05-28 09:46:33.194  INFO 11952 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-28 09:46:33.194  INFO 11952 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 842 ms
+2019-05-28 09:46:33.599  INFO 11952 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 09:46:33.668  WARN 11952 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 09:46:33.676  INFO 11952 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-05-28 09:46:33.763  INFO 11952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2019-05-28 09:46:33.765  INFO 11952 --- [main] com.ryq.sharebike.SharebikeApplication   : Started SharebikeApplication in 1.755 seconds (JVM running for 2.483)
+2019-05-28 09:46:50.234  INFO 11952 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-28 09:46:50.234  INFO 11952 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-28 09:46:50.240  INFO 11952 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2019-05-28 09:47:00.670  INFO 11952 --- [http-nio-8090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-28 09:47:00.739  INFO 11952 --- [http-nio-8090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-28 09:52:51.865  INFO 11896 --- [main] com.ryq.sharebike.SharebikeApplication   : Starting SharebikeApplication on 专属的G7 with PID 11896 (D:\idea_project\sharebike\target\classes started by 专属的G7 in D:\idea_project\sharebike)
+2019-05-28 09:52:51.868  INFO 11896 --- [main] com.ryq.sharebike.SharebikeApplication   : No active profile set, falling back to default profiles: default
+2019-05-28 09:52:52.402  WARN 11896 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:52:52.402  WARN 11896 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:52:52.402  WARN 11896 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:52:52.402  WARN 11896 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:52:52.403  WARN 11896 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 09:52:52.414  WARN 11896 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:52:52.415  WARN 11896 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:52:52.415  WARN 11896 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:52:52.415  WARN 11896 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 09:52:52.415  WARN 11896 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 09:52:52.733  INFO 11896 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2019-05-28 09:52:52.747  INFO 11896 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-28 09:52:52.747  INFO 11896 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-05-28 09:52:52.834  INFO 11896 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-28 09:52:52.834  INFO 11896 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 933 ms
+2019-05-28 09:52:53.283  INFO 11896 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 09:52:53.359  WARN 11896 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 09:52:53.369  INFO 11896 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-05-28 09:52:53.455  INFO 11896 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2019-05-28 09:52:53.457  INFO 11896 --- [main] com.ryq.sharebike.SharebikeApplication   : Started SharebikeApplication in 1.913 seconds (JVM running for 2.657)
+2019-05-28 09:53:02.743  INFO 11896 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-28 09:53:02.743  INFO 11896 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-28 09:53:02.747  INFO 11896 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-05-28 09:53:09.784  INFO 11896 --- [http-nio-8090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-28 09:53:09.854  INFO 11896 --- [http-nio-8090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-28 10:08:02.059  INFO 13852 --- [main] com.ryq.sharebike.SharebikeApplication   : Starting SharebikeApplication on 专属的G7 with PID 13852 (D:\idea_project\sharebike\target\classes started by 专属的G7 in D:\idea_project\sharebike)
+2019-05-28 10:08:02.062  INFO 13852 --- [main] com.ryq.sharebike.SharebikeApplication   : No active profile set, falling back to default profiles: default
+2019-05-28 10:08:02.523  WARN 13852 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:08:02.523  WARN 13852 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:08:02.523  WARN 13852 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:08:02.523  WARN 13852 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:08:02.524  WARN 13852 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:08:02.533  WARN 13852 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:08:02.533  WARN 13852 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:08:02.533  WARN 13852 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:08:02.533  WARN 13852 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:08:02.534  WARN 13852 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:08:02.820  INFO 13852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2019-05-28 10:08:02.834  INFO 13852 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-28 10:08:02.834  INFO 13852 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-05-28 10:08:02.924  INFO 13852 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-28 10:08:02.924  INFO 13852 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 823 ms
+2019-05-28 10:08:03.340  INFO 13852 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 10:08:03.412  WARN 13852 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 10:08:03.422  INFO 13852 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-05-28 10:08:03.511  INFO 13852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2019-05-28 10:08:03.513  INFO 13852 --- [main] com.ryq.sharebike.SharebikeApplication   : Started SharebikeApplication in 1.756 seconds (JVM running for 2.445)
+2019-05-28 10:08:06.410  INFO 13852 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-28 10:08:06.410  INFO 13852 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-28 10:08:06.415  INFO 13852 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-05-28 10:08:14.415  INFO 13852 --- [http-nio-8090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-28 10:08:14.485  INFO 13852 --- [http-nio-8090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-28 10:15:42.890  INFO 13152 --- [main] com.ryq.sharebike.SharebikeApplication   : Starting SharebikeApplication on 专属的G7 with PID 13152 (D:\idea_project\sharebike\target\classes started by 专属的G7 in D:\idea_project\sharebike)
+2019-05-28 10:15:42.893  INFO 13152 --- [main] com.ryq.sharebike.SharebikeApplication   : No active profile set, falling back to default profiles: default
+2019-05-28 10:15:43.390  WARN 13152 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:15:43.390  WARN 13152 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:15:43.390  WARN 13152 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:15:43.391  WARN 13152 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:15:43.391  WARN 13152 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:15:43.401  WARN 13152 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:15:43.401  WARN 13152 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:15:43.401  WARN 13152 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:15:43.401  WARN 13152 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:15:43.402  WARN 13152 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:15:43.687  INFO 13152 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2019-05-28 10:15:43.702  INFO 13152 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-28 10:15:43.702  INFO 13152 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-05-28 10:15:43.792  INFO 13152 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-28 10:15:43.792  INFO 13152 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 864 ms
+2019-05-28 10:15:44.200  INFO 13152 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 10:15:44.270  WARN 13152 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 10:15:44.279  INFO 13152 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-05-28 10:15:44.363  INFO 13152 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2019-05-28 10:15:44.365  INFO 13152 --- [main] com.ryq.sharebike.SharebikeApplication   : Started SharebikeApplication in 1.771 seconds (JVM running for 2.503)
+2019-05-28 10:15:52.580  INFO 13152 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-28 10:15:52.580  INFO 13152 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-28 10:15:52.584  INFO 13152 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-05-28 10:16:01.257  INFO 13152 --- [http-nio-8090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-28 10:16:01.325  INFO 13152 --- [http-nio-8090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-28 10:19:02.747  INFO 2660 --- [main] com.ryq.sharebike.SharebikeApplication   : Starting SharebikeApplication on 专属的G7 with PID 2660 (D:\idea_project\sharebike\target\classes started by 专属的G7 in D:\idea_project\sharebike)
+2019-05-28 10:19:02.750  INFO 2660 --- [main] com.ryq.sharebike.SharebikeApplication   : No active profile set, falling back to default profiles: default
+2019-05-28 10:19:03.242  WARN 2660 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:19:03.243  WARN 2660 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:19:03.243  WARN 2660 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:19:03.243  WARN 2660 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:19:03.243  WARN 2660 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:19:03.252  WARN 2660 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:19:03.252  WARN 2660 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:19:03.252  WARN 2660 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:19:03.252  WARN 2660 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:19:03.253  WARN 2660 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:19:03.548  INFO 2660 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2019-05-28 10:19:03.562  INFO 2660 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-28 10:19:03.562  INFO 2660 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-05-28 10:19:03.650  INFO 2660 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-28 10:19:03.650  INFO 2660 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 851 ms
+2019-05-28 10:19:04.082  INFO 2660 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 10:19:04.152  WARN 2660 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 10:19:04.162  INFO 2660 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-05-28 10:19:04.246  INFO 2660 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2019-05-28 10:19:04.248  INFO 2660 --- [main] com.ryq.sharebike.SharebikeApplication   : Started SharebikeApplication in 1.819 seconds (JVM running for 2.513)
+2019-05-28 10:20:52.966  INFO 9344 --- [main] com.ryq.sharebike.SharebikeApplication   : Starting SharebikeApplication on 专属的G7 with PID 9344 (D:\idea_project\sharebike\target\classes started by 专属的G7 in D:\idea_project\sharebike)
+2019-05-28 10:20:52.969  INFO 9344 --- [main] com.ryq.sharebike.SharebikeApplication   : No active profile set, falling back to default profiles: default
+2019-05-28 10:20:53.498  WARN 9344 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:20:53.498  WARN 9344 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:20:53.498  WARN 9344 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:20:53.498  WARN 9344 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:20:53.498  WARN 9344 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:20:53.508  WARN 9344 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:20:53.508  WARN 9344 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:20:53.508  WARN 9344 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:20:53.508  WARN 9344 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:20:53.508  WARN 9344 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:20:53.798  INFO 9344 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2019-05-28 10:20:53.814  INFO 9344 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-28 10:20:53.815  INFO 9344 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-05-28 10:20:53.909  INFO 9344 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-28 10:20:53.909  INFO 9344 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 896 ms
+2019-05-28 10:20:54.330  INFO 9344 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 10:20:54.403  WARN 9344 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 10:20:54.413  INFO 9344 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-05-28 10:20:54.501  INFO 9344 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2019-05-28 10:20:54.503  INFO 9344 --- [main] com.ryq.sharebike.SharebikeApplication   : Started SharebikeApplication in 1.866 seconds (JVM running for 2.592)
+2019-05-28 10:21:03.552  INFO 9344 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-28 10:21:03.552  INFO 9344 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-28 10:21:03.558  INFO 9344 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2019-05-28 10:22:35.100  INFO 11588 --- [main] com.ryq.sharebike.SharebikeApplication   : Starting SharebikeApplication on 专属的G7 with PID 11588 (D:\idea_project\sharebike\target\classes started by 专属的G7 in D:\idea_project\sharebike)
+2019-05-28 10:22:35.103  INFO 11588 --- [main] com.ryq.sharebike.SharebikeApplication   : No active profile set, falling back to default profiles: default
+2019-05-28 10:22:35.696  WARN 11588 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:22:35.696  WARN 11588 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:22:35.696  WARN 11588 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:22:35.696  WARN 11588 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:22:35.696  WARN 11588 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:22:35.705  WARN 11588 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:22:35.706  WARN 11588 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:22:35.706  WARN 11588 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:22:35.706  WARN 11588 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:22:35.706  WARN 11588 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:22:36.005  INFO 11588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2019-05-28 10:22:36.019  INFO 11588 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-28 10:22:36.019  INFO 11588 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-05-28 10:22:36.117  INFO 11588 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-28 10:22:36.117  INFO 11588 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 972 ms
+2019-05-28 10:22:36.572  INFO 11588 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 10:22:36.651  WARN 11588 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 10:22:36.664  INFO 11588 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-05-28 10:22:36.752  INFO 11588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2019-05-28 10:22:36.754  INFO 11588 --- [main] com.ryq.sharebike.SharebikeApplication   : Started SharebikeApplication in 1.978 seconds (JVM running for 2.726)
+2019-05-28 10:22:36.950  INFO 11588 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-28 10:22:36.950  INFO 11588 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-28 10:22:36.954  INFO 11588 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-05-28 10:22:42.379  INFO 11588 --- [http-nio-8090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-28 10:22:42.449  INFO 11588 --- [http-nio-8090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-28 10:23:19.194  INFO 11040 --- [main] com.ryq.sharebike.SharebikeApplication   : Starting SharebikeApplication on 专属的G7 with PID 11040 (D:\idea_project\sharebike\target\classes started by 专属的G7 in D:\idea_project\sharebike)
+2019-05-28 10:23:19.196  INFO 11040 --- [main] com.ryq.sharebike.SharebikeApplication   : No active profile set, falling back to default profiles: default
+2019-05-28 10:23:19.687  WARN 11040 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:23:19.687  WARN 11040 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:23:19.687  WARN 11040 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:23:19.687  WARN 11040 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:23:19.687  WARN 11040 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:23:19.697  WARN 11040 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:23:19.697  WARN 11040 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:23:19.697  WARN 11040 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:23:19.697  WARN 11040 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:23:19.697  WARN 11040 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:23:19.992  INFO 11040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2019-05-28 10:23:20.007  INFO 11040 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-28 10:23:20.007  INFO 11040 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-05-28 10:23:20.088  INFO 11040 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-28 10:23:20.088  INFO 11040 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 855 ms
+2019-05-28 10:23:20.544  INFO 11040 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 10:23:20.617  WARN 11040 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 10:23:20.627  INFO 11040 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-05-28 10:23:20.714  INFO 11040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2019-05-28 10:23:20.716  INFO 11040 --- [main] com.ryq.sharebike.SharebikeApplication   : Started SharebikeApplication in 1.83 seconds (JVM running for 2.637)
+2019-05-28 10:23:22.486  INFO 11040 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-28 10:23:22.486  INFO 11040 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-28 10:23:22.491  INFO 11040 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-05-28 10:23:29.707  INFO 11040 --- [http-nio-8090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-28 10:23:29.775  INFO 11040 --- [http-nio-8090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-28 10:29:52.695  INFO 1476 --- [main] com.ryq.sharebike.SharebikeApplication   : Starting SharebikeApplication on 专属的G7 with PID 1476 (D:\idea_project\sharebike\target\classes started by 专属的G7 in D:\idea_project\sharebike)
+2019-05-28 10:29:52.699  INFO 1476 --- [main] com.ryq.sharebike.SharebikeApplication   : No active profile set, falling back to default profiles: default
+2019-05-28 10:29:53.227  WARN 1476 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:29:53.228  WARN 1476 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:29:53.228  WARN 1476 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:29:53.228  WARN 1476 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:29:53.228  WARN 1476 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:29:53.237  WARN 1476 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:29:53.237  WARN 1476 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:29:53.237  WARN 1476 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:29:53.237  WARN 1476 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:29:53.237  WARN 1476 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:29:53.552  INFO 1476 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2019-05-28 10:29:53.566  INFO 1476 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-28 10:29:53.566  INFO 1476 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-05-28 10:29:53.655  INFO 1476 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-28 10:29:53.656  INFO 1476 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 914 ms
+2019-05-28 10:29:54.084  INFO 1476 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 10:29:54.154  WARN 1476 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 10:29:54.163  INFO 1476 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-05-28 10:29:54.255  INFO 1476 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2019-05-28 10:29:54.257  INFO 1476 --- [main] com.ryq.sharebike.SharebikeApplication   : Started SharebikeApplication in 1.898 seconds (JVM running for 2.587)
+2019-05-28 10:30:39.278  INFO 16096 --- [main] com.ryq.sharebike.SharebikeApplication   : Starting SharebikeApplication on 专属的G7 with PID 16096 (D:\idea_project\sharebike\target\classes started by 专属的G7 in D:\idea_project\sharebike)
+2019-05-28 10:30:39.281  INFO 16096 --- [main] com.ryq.sharebike.SharebikeApplication   : No active profile set, falling back to default profiles: default
+2019-05-28 10:30:40.076  WARN 16096 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:30:40.076  WARN 16096 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:30:40.076  WARN 16096 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:30:40.077  WARN 16096 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:30:40.077  WARN 16096 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:30:40.090  WARN 16096 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:30:40.090  WARN 16096 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:30:40.090  WARN 16096 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:30:40.090  WARN 16096 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:30:40.091  WARN 16096 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:30:40.458  INFO 16096 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2019-05-28 10:30:40.474  INFO 16096 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-28 10:30:40.474  INFO 16096 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-05-28 10:30:40.601  INFO 16096 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-28 10:30:40.601  INFO 16096 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1256 ms
+2019-05-28 10:30:41.071  INFO 16096 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 10:30:41.167  WARN 16096 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 10:30:41.176  INFO 16096 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-05-28 10:30:41.264  INFO 16096 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2019-05-28 10:30:41.266  INFO 16096 --- [main] com.ryq.sharebike.SharebikeApplication   : Started SharebikeApplication in 2.664 seconds (JVM running for 3.391)
+2019-05-28 10:30:41.318  INFO 16096 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-28 10:30:41.318  INFO 16096 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-28 10:30:41.321  INFO 16096 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2019-05-28 10:30:50.895  INFO 16096 --- [http-nio-8090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-28 10:30:50.964  INFO 16096 --- [http-nio-8090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-28 10:34:37.349  INFO 7100 --- [main] com.ryq.sharebike.SharebikeApplication   : Starting SharebikeApplication on 专属的G7 with PID 7100 (D:\idea_project\sharebike\target\classes started by 专属的G7 in D:\idea_project\sharebike)
+2019-05-28 10:34:37.353  INFO 7100 --- [main] com.ryq.sharebike.SharebikeApplication   : No active profile set, falling back to default profiles: default
+2019-05-28 10:34:38.006  WARN 7100 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:34:38.006  WARN 7100 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:34:38.006  WARN 7100 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:34:38.006  WARN 7100 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:34:38.007  WARN 7100 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:34:38.023  WARN 7100 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:34:38.023  WARN 7100 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:34:38.024  WARN 7100 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:34:38.024  WARN 7100 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:34:38.024  WARN 7100 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:34:41.217  INFO 944 --- [main] com.ryq.sharebike.SharebikeApplication   : Starting SharebikeApplication on 专属的G7 with PID 944 (D:\idea_project\sharebike\target\classes started by 专属的G7 in D:\idea_project\sharebike)
+2019-05-28 10:34:41.220  INFO 944 --- [main] com.ryq.sharebike.SharebikeApplication   : No active profile set, falling back to default profiles: default
+2019-05-28 10:34:41.770  WARN 944 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:34:41.770  WARN 944 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:34:41.770  WARN 944 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:34:41.770  WARN 944 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:34:41.770  WARN 944 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:34:41.785  WARN 944 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:34:41.785  WARN 944 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:34:41.785  WARN 944 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:34:41.785  WARN 944 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:34:41.785  WARN 944 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:34:42.065  INFO 944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2019-05-28 10:34:42.079  INFO 944 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-28 10:34:42.079  INFO 944 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-05-28 10:34:42.158  INFO 944 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-28 10:34:42.158  INFO 944 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 898 ms
+2019-05-28 10:34:42.572  INFO 944 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 10:34:42.639  WARN 944 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 10:34:42.649  INFO 944 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-05-28 10:34:42.732  INFO 944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2019-05-28 10:34:42.734  INFO 944 --- [main] com.ryq.sharebike.SharebikeApplication   : Started SharebikeApplication in 1.853 seconds (JVM running for 2.508)
+2019-05-28 10:34:46.133  INFO 944 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-28 10:34:46.133  INFO 944 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-28 10:34:46.137  INFO 944 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-05-28 10:34:52.549  INFO 944 --- [http-nio-8090-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-28 10:34:52.622  INFO 944 --- [http-nio-8090-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-28 10:39:58.843  INFO 10176 --- [main] com.ryq.sharebike.SharebikeApplication   : Starting SharebikeApplication on 专属的G7 with PID 10176 (D:\idea_project\sharebike\target\classes started by 专属的G7 in D:\idea_project\sharebike)
+2019-05-28 10:39:58.849  INFO 10176 --- [main] com.ryq.sharebike.SharebikeApplication   : No active profile set, falling back to default profiles: default
+2019-05-28 10:39:59.363  WARN 10176 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:39:59.364  WARN 10176 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:39:59.364  WARN 10176 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:39:59.364  WARN 10176 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:39:59.364  WARN 10176 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:39:59.374  WARN 10176 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:39:59.374  WARN 10176 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:39:59.374  WARN 10176 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:39:59.374  WARN 10176 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 10:39:59.374  WARN 10176 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 10:39:59.650  INFO 10176 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2019-05-28 10:39:59.663  INFO 10176 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-28 10:39:59.663  INFO 10176 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-05-28 10:39:59.750  INFO 10176 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-28 10:39:59.750  INFO 10176 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 859 ms
+2019-05-28 10:40:00.184  INFO 10176 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 10:40:00.256  WARN 10176 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 10:40:00.266  INFO 10176 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-05-28 10:40:00.352  INFO 10176 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2019-05-28 10:40:00.354  INFO 10176 --- [main] com.ryq.sharebike.SharebikeApplication   : Started SharebikeApplication in 1.854 seconds (JVM running for 2.587)
+2019-05-28 10:40:01.756  INFO 10176 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-28 10:40:01.757  INFO 10176 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-28 10:40:01.761  INFO 10176 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-05-28 10:40:08.555  INFO 10176 --- [http-nio-8090-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-28 10:40:08.624  INFO 10176 --- [http-nio-8090-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-28 14:30:14.645  INFO 8088 --- [main] com.ryq.sharebike.SharebikeApplication   : Starting SharebikeApplication on 专属的G7 with PID 8088 (D:\idea_project\sharebike\target\classes started by 专属的G7 in D:\idea_project\sharebike)
+2019-05-28 14:30:14.647  INFO 8088 --- [main] com.ryq.sharebike.SharebikeApplication   : No active profile set, falling back to default profiles: default
+2019-05-28 14:30:15.169  WARN 8088 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 14:30:15.169  WARN 8088 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 14:30:15.169  WARN 8088 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 14:30:15.169  WARN 8088 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 14:30:15.169  WARN 8088 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 14:30:15.179  WARN 8088 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 14:30:15.179  WARN 8088 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 14:30:15.180  WARN 8088 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 14:30:15.180  WARN 8088 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-28 14:30:15.180  WARN 8088 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-05-28 14:30:15.525  INFO 8088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2019-05-28 14:30:15.540  INFO 8088 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-28 14:30:15.540  INFO 8088 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-05-28 14:30:15.636  INFO 8088 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-28 14:30:15.636  INFO 8088 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 952 ms
+2019-05-28 14:30:16.068  INFO 8088 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 14:30:16.139  WARN 8088 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 14:30:16.149  INFO 8088 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-05-28 14:30:16.235  INFO 8088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2019-05-28 14:30:16.237  INFO 8088 --- [main] com.ryq.sharebike.SharebikeApplication   : Started SharebikeApplication in 1.917 seconds (JVM running for 2.658)
+2019-05-28 14:30:33.130  INFO 8088 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-28 14:30:33.131  INFO 8088 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-28 14:30:33.137  INFO 8088 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2019-05-28 14:30:42.393  INFO 8088 --- [http-nio-8090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-28 14:30:42.464  INFO 8088 --- [http-nio-8090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.

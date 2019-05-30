@@ -1,0 +1,30 @@
+spring:
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  thymeleaf:
+      prefix: classpath:/templates/
+      suffix: .html
+      encoding: UTF-8
+      cache: false
+      mode: HTML5
+  datasource:
+   url: jdbc:mysql://localhost:3306/sharebike?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+   username: root
+   password: 123456
+   driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  type-aliases-package: com.ryq.sharebike.pojo
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    lazy-loading-enabled: true
+    aggressive-lazy-loading: false
+mapper:
+  mappers: com.ryq.sharebike.util.CommnMapper
+  not-empty: false
+  identity: MYSQL
+logging:
+  file:
+    path: login.log
+server:
+  port: 8090

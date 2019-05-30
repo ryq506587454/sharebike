@@ -1,0 +1,173 @@
+<!doctype html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>查看待维修车辆</title>
+    <meta name="description" content="这是一个 index 页面">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="icon" type="image/png" href="assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body data-type="generalComponents">
+
+<header class="am-topbar am-topbar-inverse admin-header">
+    <div class="am-topbar-brand">
+        <a href="javascript:;" class="tpl-logo">
+            <img src="assets/img/logo.png" alt="">
+        </a>
+    </div>
+    <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+
+    </div>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
+            data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span
+            class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+        <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
+
+            <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+                    <span class="tpl-header-list-user-nick" id="userName">none</span><span
+                        class="tpl-header-list-user-ico"> <img src="assets/img/user01.png"></span>
+                </a>
+            </li>
+            <li><a id = "quit" class="tpl-header-list-link"><span
+                    class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="tpl-page-container tpl-page-header-fixed">
+
+    <div class="tpl-left-nav tpl-left-nav-hover">
+        <div class="tpl-left-nav-title" style="font-size: 16px;margin-bottom: 15px;margin-top: -10px;">
+            ShareBike
+        </div>
+        <div class="tpl-left-nav-list">
+            <ul class="tpl-left-nav-menu">
+                <li class="tpl-left-nav-item">
+                    <a href="UserIndex" class="nav-link ">
+                        <i class="am-icon-home"></i>
+                        <span>首页</span>
+                    </a>
+                </li>
+                <li class="tpl-left-nav-item">
+                    <a href="UserUseBike" class="nav-link tpl-left-nav-link-list active">
+                        <i class="am-icon-car"></i>
+                        <span>使用车辆</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                </li>
+                <li class="tpl-left-nav-item">
+                    <a href="UserAppointBike" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-bell"></i>
+                        <span>预约车辆</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                </li>
+                <li class="tpl-left-nav-item">
+                    <a href="UserRechare" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-money"></i>
+                        <span>充值</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                </li>
+                <li class="tpl-left-nav-item">
+                    <a href="UserInfo" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-child"></i>
+                        <span>查看个人信息</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="tpl-content-wrapper">
+        <div class="tpl-content-page-title">
+            使用车辆
+        </div>
+        <ol class="am-breadcrumb">
+            <li><a href="UserIndex" class="am-icon-home">首页</a></li>
+            <li><a href="#">使用车辆</a></li>
+        </ol>
+        <div class="tpl-portlet-components">
+            <div class="portlet-title">
+                <div class="caption font-green bold">
+                    <span class="am-icon-code">开始使用</span>
+                </div>
+            </div>
+            <div class="tpl-block">
+                <div class="am-g">
+                    <form class="am-form am-u-sm-offset-1 am-u-sm-10">
+                        <fieldset>
+                            <legend>请输入车辆编号</legend>
+                            <div class="am-form-group">
+                                <label >车辆编号</label>
+                                <input type="number" class="am-form-field am-radius" id="bikeId" placeholder="输入车辆编号">
+                            </div>
+                            <p>
+                                <button type="button" class="am-btn am-btn-default" id="useBike">开始使用</button>
+                                <button type="button" class="am-btn am-btn-default" id="backBike">结束使用</button>
+                            </p>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="tpl-alert"></div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="js/my.js" th:inline="javascript"></script>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    var user = /*[[${session.user}]]*/ null;
+    if (user == null) {
+        alert("请先登录");
+        window.location.href = "login"
+    } else {
+        $('#userName').text(user.userName);
+    }
+    $('#useBike').click(function () {
+        var mydata = {}
+        mydata.bikeId = $('#bikeId').val()
+        $.ajax({
+            type: "post",
+            url: "/user/useBike",
+            data: JSON.stringify(mydata),
+            contentType: "application/json;charset=utf-8",
+            success: function (result) {
+                alert(result)
+            }
+        })
+    })
+    $('#backBike').click(function () {
+        $.ajax({
+            type: "post",
+            url: "/user/backBike",
+            contentType: "application/json;charset=utf-8",
+            success: function (result) {
+                alert(result)
+            }
+        })
+    })
+    /*]]>*/
+</script>
+</body>
+
+</html>

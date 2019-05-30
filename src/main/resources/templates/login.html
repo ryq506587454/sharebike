@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>登陆</title>
+    <link rel="stylesheet" href="/css/login.css"/>
+</head>
+<body>
+<body class="drag">
+<div id="login">
+    <h1>ShareBike</h1>
+    <input type="text" required oninvalid="setCustomValidity('请输入账号');" placeholder="用户名(手机号)" id="phone"></input>
+    <input type="password" required oninvalid="setCustomValidity('请输入密码');" placeholder="密码" id="password"></input>
+    <button class="butt" id="userLogin">登录</button>
+</div>
+</body>
+<script src="/js/jquery.min.js"></script>
+<script>
+    $("#userLogin").click(function () {
+        var mydata = {}
+        mydata.phone = $("#phone").val()
+        mydata.password = $("#password").val()
+        $.ajax({
+            type: "post",
+            url: "/user/login",
+            contentType: "application/json;charset=utf-8",
+            data: JSON.stringify(mydata),
+            success: function (result) {
+                if (result == 1) {
+                    alert("登录成功")
+                    location.href = "index";
+                } else if (result == 2) {
+                    alert("登录成功")
+                    location.href = "UserIndex";
+                } else {
+                    alert("登录失败，请检查账号密码")
+                }
+            }
+        })
+    })
+</script>
+</body>
+</html>
