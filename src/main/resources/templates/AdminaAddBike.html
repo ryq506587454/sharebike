@@ -4,23 +4,21 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ShareBike后台管理系统</title>
+    <title>查看待维修车辆</title>
     <meta name="description" content="这是一个 index 页面">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
-
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
     <link rel="icon" type="image/png" href="assets/i/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
-    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
     <link rel="stylesheet" href="assets/css/admin.css">
     <link rel="stylesheet" href="assets/css/app.css">
-    <script src="assets/js/echarts.min.js"></script>
 </head>
 
-<body data-type="index" th:inline="text">
+<body data-type="generalComponents">
 
 <header class="am-topbar am-topbar-inverse admin-header">
     <div class="am-topbar-brand">
@@ -53,14 +51,10 @@
 </header>
 
 <div class="tpl-page-container tpl-page-header-fixed">
-    <!--
-作者：506587454@qq.com
-时间：2019-05-26
-描述：左侧开始
--->
+
     <div class="tpl-left-nav tpl-left-nav-hover">
         <div class="tpl-left-nav-title" style="font-size: 16px;margin-bottom: 15px;margin-top: -10px;">
-            OFO管理系统
+            ShareBike管理系统
         </div>
         <div class="tpl-left-nav-list">
             <ul class="tpl-left-nav-menu">
@@ -166,29 +160,43 @@
             </ul>
         </div>
     </div>
-    <!--
-    作者：506587454@qq.com
-    时间：2019-05-26
-    描述：左侧结束
--->
     <div class="tpl-content-wrapper">
         <div class="tpl-content-page-title">
-            ShareBike后台管理
+           车辆管理
         </div>
         <ol class="am-breadcrumb">
             <li><a href="index" class="am-icon-home">首页</a></li>
+            <li><a href="#">车辆管理</a></li>
+            <li class="am-active">添加车辆</li>
         </ol>
-        <div class="tpl-content-scope">
-            <div class="note note-info">
-                <h3>ShareBike 科技 </h3>
-                <p> ShareBike小黑车是全球领先的无桩共享单车平台。用户可通过手机解锁自行车，享受随时随地有车骑的共享出行服务。更好骑的共享单车，领先的移动物联网智能锁，全球领先的人工智能大数据平台“虫洞”系统。ShareBike小黑车建立起从用户舒适骑行到以物联网为载体、人工智能为核心的科技闭环。</p>
-                <h3>ShareBike 全球化</h3>
-                <p> ShareBike在全球21个国家超过250座城市提供服务。其中海外运营城市超过50座，投放超过10万辆共享单车，为海外用户累计提供超过1000万次骑行服务。目前，ShareBike 在海外由当地用户贡献的订单占比已超过99%，优秀的产品、技术和运营实力，让ShareBike受到越来越多国家的认可，成为真正服务全球的共享单车平台。</p>
-                <h3>ShareBike 社会责任</h3>
-                <p> ShareBike致力于倡导绿色出行理念，通过整合自行车产能及供应链，在全球推广共享单车的出行理念，为各大城市提供便捷高效的绿色出行服务，满足用户的美好生活需要，同时推动自行车行业转型升级、打造城市绿色交通体系、提升城市出行效率，助力信用城市、智慧城市建设。</p>
-                <h3>ShareBike 政府合作</h3>
-                <p> ShareBike自进入城市以来，先后与全国众多城市政府及管理部门深入合作，为当地城市交通及经济发展贡献力量。通过良好的沟通机制,ShareBike与各地政府共同探索政企共治的共享单车运营管理模式，描绘新时代下智慧城市的发展蓝图。ShareBike 与城市管理部门的合作模式,成为城市创新治理的新样本。</p>
+        <div class="tpl-portlet-components">
+            <div class="portlet-title">
+                <div class="caption font-green bold">
+                    <span class="am-icon-code">添加车辆</span>
+                </div>
             </div>
+            <div class="tpl-block">
+                <div class="am-g">
+                    <form class="am-form am-u-sm-offset-3 am-u-sm-6 am-u-end">
+                        <fieldset>
+                            <legend>请输入车辆类型和数量</legend>
+                            <div class="am-form-group am-form-select">
+                                <label >车辆类型</label>
+                                <select class=" am-input-sm" id="opt">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </div>
+                            <div class="am-form-group">
+                                <label >新增数量</label>
+                                <input type="number" onfocus="this.blur();" min="1" max="100" class="am-form-field am-radius" id="bikeNumber" placeholder="输入新增数量">
+                            </div>
+                            <button type="button" class="am-btn am-btn-default am-u-sm-2 am-u-sm-offset-5" id="summit">添加</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
@@ -196,16 +204,58 @@
 <script src="assets/js/amazeui.min.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="js/my.js" th:inline="javascript"></script>
-<script th:inline="javascript">
+<script type="text/javascript" th:inline="javascript">
     /*<![CDATA[*/
     var user = /*[[${session.user}]]*/ null;
     if (user == null) {
         alert("请先登录");
         window.location.href = "login"
-    } else {
+    } else if(user.grade != 2){
+        alert("您没有权限访问该网页");
+        window.location.href = "index"
+    }else {
         $('#userName').text(user.userName);
     }
+    $(function () {
+        $.ajax({
+            type: "post",
+            url: "/admin/getBikeKind",
+            contentType: "application/json;charset=utf-8",
+            success: function (result) {
+                if(result.code == 101){
+                    $("#opt").empty();
+                    $.each(result.list, function (index, data) {
+                        var kind;
+                        if (data.kind == 0){
+                            kind = "自行车";
+                        }else{
+                            kind = "电动车";
+                        }
+                        $("#opt").append(
+                        '<option value="'+data.typeId+'">'+data.supplier+','+kind+'</option>'
+                        );
+                    });
+                }
+            }
+        })
+    });
+    $('#summit').click(function () {
+        var mydata = {}
+        mydata.typeId = $('#opt').val()
+        mydata.number = $('#bikeNumber').val()
+        $.ajax({
+            type:"post",
+            url: "/admin/addBike",
+            data:JSON.stringify(mydata),
+            contentType: "application/json;charset=utf-8",
+            success:function(result){
+                alert(result)
+                window.location.hrefhref ="AdminFindAllBike"
+            }
+        })
+    })
     /*]]>*/
 </script>
 </body>
+
 </html>

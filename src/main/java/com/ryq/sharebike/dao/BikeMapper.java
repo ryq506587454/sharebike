@@ -1,5 +1,6 @@
 package com.ryq.sharebike.dao;
 
+import com.github.pagehelper.Page;
 import com.ryq.sharebike.pojo.Bike;
 import com.ryq.sharebike.pojo.BikeType;
 import com.ryq.sharebike.pojo.RepairRecord;
@@ -16,6 +17,8 @@ import java.util.List;
 public interface BikeMapper extends CommnMapper<Bike> {
     //根据Id查车
     Bike getBikeById(@Param("id") int id);
+    //查看所有车辆信息
+    Page<Bike> findAllBike();
     //更改车辆状态
     int changBikeStateById(@Param("bikeId") int bikeId,@Param("state") int state);
     //根据BikeID修改车辆数量
@@ -32,5 +35,7 @@ public interface BikeMapper extends CommnMapper<Bike> {
     int addBikeType(@Param("bikeType") BikeType bikeType);
     //根据供应商和种类查找车辆种类
     BikeType findBikeTypeByDetil(@Param("bikeType")BikeType bikeType);
+
+
 
 }

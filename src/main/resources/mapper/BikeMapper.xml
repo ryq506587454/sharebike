@@ -67,5 +67,10 @@
     <select id="findBikeTypeByDetil" resultType="com.ryq.sharebike.pojo.BikeType" parameterType="com.ryq.sharebike.pojo.BikeType">
         select * from bike_type where supplier = #{bikeType.supplier} and kind = #{bikeType.kind};
     </select>
-
+    <!--List<Bike> findAllBike();-->
+    <select id="findAllBike" resultMap="bikeInfo">
+        select *
+        from bike as b,bike_type as bt
+        where b.typeId = bt.typeId
+    </select>
 </mapper>

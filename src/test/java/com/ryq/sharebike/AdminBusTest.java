@@ -26,25 +26,25 @@ public class AdminBusTest {
     @Autowired
     private RepairmenServiceImp repairmenServiceImp;
 
-    @Test
-    public void addBike() {
-        BikeType bt = new BikeType(2, 5);
-        int a = adminServiceImp.addBike(bt);
-        if (a == -1) {
-            System.out.println("未知bike类型");
-        } else {
-            System.out.println("共增加" + a);
-        }
-    }
+//    @Test
+//    public void addBike() {
+//        BikeType bt = new BikeType(2, 5);
+//        int a = adminServiceImp.addBike(bt);
+//        if (a == -1) {
+//            System.out.println("未知bike类型");
+//        } else {
+//            System.out.println("共增加" + a);
+//        }
+//    }
 
     /*
     0:全部
      */
-    @Test
-    public void findBikeType() {
-        List<BikeType> bikeTypes = adminServiceImp.findBikeType(0);
-        System.out.println(bikeTypes.size());
-    }
+//    @Test
+//    public void findBikeType() {
+//        List<BikeType> bikeTypes = adminServiceImp.findBikeType(0);
+//        System.out.println(bikeTypes.size());
+//    }
 
     @Test
     public void addBikeType() {
@@ -81,22 +81,22 @@ public class AdminBusTest {
         }
     }
 
-    @Test
-    public void beginRepair(){
-        int userId = 0;
-        int a = repairmenServiceImp.beginRepair(userId,5);
-        if (a == 0) {
-            System.out.println("无该车信息");
-        } else if (a == 1) {
-            System.out.println("该车不处于待修状态");
-        } else if (a == 2) {
-            System.out.println("开始维修");
-        } else if(a == 3){
-            System.out.println("维修员正在维修车辆已达上限");
-        } else {
-            System.out.println("出现未知错误");
-        }
-    }
+//    @Test
+//    public void beginRepair(){
+//        int userId = 0;
+//        int a = repairmenServiceImp.beginRepair(userId,5);
+//        if (a == 0) {
+//            System.out.println("无该车信息");
+//        } else if (a == 1) {
+//            System.out.println("该车不处于待修状态");
+//        } else if (a == 2) {
+//            System.out.println("开始维修");
+//        } else if(a == 3){
+//            System.out.println("维修员正在维修车辆已达上限");
+//        } else {
+//            System.out.println("出现未知错误");
+//        }
+//    }
 
     @Test
     public void staticUserByRegister() throws ParseException {

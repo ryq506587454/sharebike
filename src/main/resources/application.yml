@@ -28,3 +28,9 @@ logging:
     path: login.log
 server:
   port: 8090
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=coutSql
+

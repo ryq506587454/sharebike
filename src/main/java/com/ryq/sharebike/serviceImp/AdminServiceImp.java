@@ -1,5 +1,7 @@
 package com.ryq.sharebike.serviceImp;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.ryq.sharebike.dao.BikeMapper;
 import com.ryq.sharebike.dao.RepairMapper;
 import com.ryq.sharebike.dao.StatisticMapper;
@@ -48,6 +50,12 @@ public class AdminServiceImp implements AdminService {
     }
 
     @Override
+    public Page<Bike> findAllBike(int pageNo, int pageSize) {
+        PageHelper.startPage(pageNo,pageSize);
+        return bikeMapper.findAllBike();
+    }
+
+    @Override
     public int addBikeType(BikeType type) {
         if(bikeMapper.findBikeTypeByDetil(type) == null){
             return bikeMapper.addBikeType(type);
@@ -80,6 +88,11 @@ public class AdminServiceImp implements AdminService {
     @Override
     public List<User> findUserByRegister(Date bDate, Date eDate) {
         return statisticMapper.findUserByRegisterDate(bDate,eDate);
+    }
+
+    @Override
+    public Bike findBikeByBikeId(int bikeId) {
+        return bikeMapper.getBikeById(bikeId);
     }
 
 }

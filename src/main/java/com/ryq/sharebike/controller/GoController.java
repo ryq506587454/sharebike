@@ -46,7 +46,10 @@ public class GoController {
     public String UserInfo(){return "UserInfo";}
     @RequestMapping(value = "UserRechare")
     public String UserRechare(){return "UserRechare";}
-
+    @RequestMapping(value = "AdminaAddBike")
+    public String AdminaAddBike(){return "AdminaAddBike";}
+    @RequestMapping ( value = "AdminFindAllBike")
+    public String AdminFindAllBike(){return "AdminFindAllBike";}
 
 
 }
