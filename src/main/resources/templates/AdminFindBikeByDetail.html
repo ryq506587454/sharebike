@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>查看维修记录</title>
+    <title>查看待维修车辆</title>
     <meta name="description" content="这是一个 index 页面">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,6 +19,7 @@
 </head>
 
 <body data-type="generalComponents">
+
 <header class="am-topbar am-topbar-inverse admin-header">
     <div class="am-topbar-brand">
         <a href="javascript:;" class="tpl-logo">
@@ -50,6 +51,7 @@
 </header>
 
 <div class="tpl-page-container tpl-page-header-fixed">
+
     <div class="tpl-left-nav tpl-left-nav-hover">
         <div class="tpl-left-nav-title" style="font-size: 16px;margin-bottom: 15px;margin-top: -10px;">
             ShareBike管理系统
@@ -165,49 +167,39 @@
         <ol class="am-breadcrumb">
             <li><a href="index" class="am-icon-home">首页</a></li>
             <li><a href="#">维修管理</a></li>
-            <li class="am-active">已完成的维修记录</li>
+            <li class="am-active">完成维修</li>
         </ol>
         <div class="tpl-portlet-components">
             <div class="portlet-title">
                 <div class="caption font-green bold">
-                    <span class="am-icon-code">已完成的维修记录列表</span>
+                    <span class="am-icon-code">完成维修</span>
                 </div>
             </div>
             <div class="tpl-block">
                 <div class="am-g">
-                    <div class="am-u-sm-offset-2 am-u-sm-4">
-                        <div class="am-input-group am-datepicker-date" data-am-datepicker="{format: 'yyyy-mm-dd', viewMode: 'years'}">
-                            <input type="text" class="am-form-field" placeholder=" 选择开始时间" id="my-start"  readonly>
-                            <span class="am-input-group-btn am-datepicker-add-on">
-                                <button class="am-btn am-btn-default" type="button"><span class="am-icon-calendar"></span> </button>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-4">
-                        <div class="am-input-group am-datepicker-date" data-am-datepicker="{format: 'yyyy-mm-dd', viewMode: 'years'}">
-                            <input type="text" class="am-form-field" placeholder=" 选择结束时间" id="my-end"  readonly>
-                            <span class="am-input-group-btn am-datepicker-add-on">
-                                <button class="am-btn am-btn-default" type="button"><span class="am-icon-calendar"></span> </button>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-2">
-                        <button type="button" class="am-btn am-btn-default am-btn-primary" id="check">查询</button>
-                        <button type="button" class="am-btn am-btn-default am-btn-primary" id="all">全部</button>
-                    </div>
+                    <form class="am-u-sm-12">
+                        <fieldset>
+                            <legend>请输入车辆编号</legend>
+                            <div class="am-form-group col-md-8">
+                                <label>车辆编号</label>
+                            </div>
+                            <input type="number" class="am-form-field am-radius" id="bikeId" placeholder="输入车辆编号">
+                        </fieldset>
+                        <button type="button" class="am-btn am-btn-default am-u-sm-2" id="summit">查询</button>
+                    </form>
                 </div>
+            </div>
+            <div class="tpl-alert">
                 <div class="am-g">
                     <div class="am-u-sm-12">
                         <form class="am-form">
                             <table class="am-table am-table-striped am-table-hover table-main">
                                 <thead>
                                 <tr>
-                                    <th style="text-align: center">维修编号</th>
-                                    <th style="text-align: center">车辆ID</th>
-                                    <th style="text-align: center">维修人员ID</th>
-                                    <th style="text-align: center">维修开始时间</th>
-                                    <th style="text-align: center">维修结束时间</th>
-                                    <th style="text-align: center">操作</th>
+                                    <th class="am-u-lg-3" style="text-align: center">车辆ID</th>
+                                    <th class="am-u-lg-3" style="text-align: center">车辆状态</th>
+                                    <th class="am-u-lg-3" style="text-align: center">车辆添加时间</th>
+                                    <th class="am-u-lg-3 " style="text-align: center">车辆种类</th>
                                 </tr>
                                 </thead>
                                 <tbody id="reptbody">
@@ -216,21 +208,16 @@
                             <div class="am-cf">
                                 <div class="am-fr">
                                     <ul class="am-pagination tpl-pagination">
-                                        <li class="am-disabled"><a href="#">«</a></li>
-                                        <li class="am-active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">»</a></li>
+                                        <li id="shangli" class="am-disabled"><a href="#" id="shang">«</a></li>
+                                        <li id="xiali" class="am-disabled"><a href="#" id="xia">»</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <hr>
-
                         </form>
                     </div>
-
                 </div>
             </div>
-            <div class="tpl-alert"></div>
         </div>
     </div>
 </div>
@@ -238,133 +225,142 @@
 <script src="assets/js/amazeui.min.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="js/my.js" th:inline="javascript"></script>
-<script th:inline="javascript">
+<script type="text/javascript" th:inline="javascript">
     /*<![CDATA[*/
     var user = /*[[${session.user}]]*/ null;
     if (user == null) {
         alert("请先登录");
         window.location.href = "login"
-    } else {
+    } else if(user.grade != 2){
+        alert("您没有权限访问该网页");
+        window.location.href = "index"
+    }else {
         $('#userName').text(user.userName);
     }
+    var page = 1;
+    var mydata = {}
+    function loadData() {
+        mydata.page = page
+        $.ajax({
+            type: "post",
+            url: "/admin/findAllBike",
+            contentType: "application/json;charset=utf-8",
+            data: JSON.stringify(mydata),
+            success: function (result) {
+                if(result.list.isFirstPage){
+                    $("#shangli").addClass("am-disabled")
+                }else{
+                    $("#shangli").removeClass("am-disabled")
+                }
+                if(result.list.isLastPage){
+                    $("#xiali").addClass("am-disabled")
+                }else{
+                    $("#xiali").removeClass("am-disabled")
+                }
+                console.log(result)
+                if (result.code == 100) {
+                    alert(result.msg);
+                } else {
+                    $("#reptbody").empty();
+                    $.each(result.list.list, function (index, data) {
+                        var kind;
+                        if (data.type.kind == 0){
+                            kind = "自行车";
+                        }else{
+                            kind = "电动车";
+                        }
+                        var state;
+                        if(data.state == 0){
+                            state = "等待维修";
+                        }else if(data.state == 1){
+                            state = "正在维修";
+                        }else if(data.state == 2){
+                            state = "已被预约";
+                        }else if(data.state == 3){
+                            state = "正被使用";
+                        }else if(data.state == 4){
+                            state = "可以使用";
+                        }
+                        $("#reptbody").append(
+                            '<tr>' +
+                            '<td class="am-u-lg-3"  style="text-align: center">' + data.bikeId + '</td>' +
+                            '<td class="am-u-lg-3"  style="text-align: center">' + state + '</td>' +
+                            '<td class="am-u-lg-3"  style="text-align: center">' + data.startTime + '</td>' +
+                            '<td class="am-u-lg-3"  style="text-align: center">' + data.type.supplier+','+kind+'</td>' +
+                            '</tr>'
+                        );
+                    });
+                }
+            }
+        });
+    }
+    function loadDataByDetil(){
+        $.ajax({
+            type:"post",
+            url: "/admin/findAllBike",
+            contentType: "application/json;charset=utf-8",
+            success: function (result) {
+                
+            }
+        })
+    }
     $(function () {
-        var mydata = {}
-        mydata.bDate = null
-        mydata.eDate =  null
-        $.ajax({
-            type: "post",
-            url: "/repair/getRepairFinshRecords",
-            data:JSON.stringify(mydata),
-            contentType: "application/json;charset=utf-8",
-            success: function (result) {
-                console.log(result)
-                if (result.code == 100) {
-                    alert(result.msg);
-                } else {
-                    $("#reptbody").empty();
-                    $.each(result.list, function (index, data) {
-                        $("#reptbody").append(
-                            '<tr>' +
-                            '<td style="text-align: center">' + data.id + '</td>' +
-                            '<td style="text-align: center">' + data.bikeId + '</td>' +
-                            '<td style="text-align: center">' + data.userId + '</td>' +
-                            '<td style="text-align: center">' + data.repairDate + '</td>' +
-                            '<td style="text-align: center">' + data.finshDate + '</td>' +
-                            '<td style="text-align: center">' +
-                            '<div class="am-btn-toolbar" style="text-align: center">' +
-                            '<div class="am-btn-group am-btn-group-xs">' +
-                            '<button class="am-btn am-btn-default am-btn-xs am-text-secondary am-round">' +
-                            '<span class="am-icon-pencil-square-o"> 编辑</span>' +
-                            '</button>' +
-                            '<button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only am-round">' +
-                            '<span class="am-icon-trash-o">删除</span>' +
-                            '</button></div></div></td>' +
-                            '</tr>'
-                        );
-                    });
-                }
-            }
-        })
+        loadData();
     });
-    $("#all").click(function () {
-        var mydata = {}
-        mydata.bDate = null
-        mydata.eDate =  null
+    $("#shang").click(function () {
+        page = page - 1;
+        loadData();
+    });
+    $("#xia").click(function () {
+        page = page + 1;
+        loadData();
+    });
+    $('#summit').click(function () {
+        mydata.bikeId = $('#bikeId').val()
         $.ajax({
             type: "post",
-            url: "/repair/getRepairFinshRecords",
+            url: "/admin/findBikeById",
             data:JSON.stringify(mydata),
             contentType: "application/json;charset=utf-8",
             success: function (result) {
-                console.log(result)
                 if (result.code == 100) {
                     alert(result.msg);
-                } else {
+                }else{
+                    $("#xiali").addClass("am-disabled")
+                    $("#shangli").addClass("am-disabled")
                     $("#reptbody").empty();
-                    $.each(result.list, function (index, data) {
-                        $("#reptbody").append(
-                            '<tr>' +
-                            '<td style="text-align: center">' + data.id + '</td>' +
-                            '<td style="text-align: center">' + data.bikeId + '</td>' +
-                            '<td style="text-align: center">' + data.userId + '</td>' +
-                            '<td style="text-align: center">' + data.repairDate + '</td>' +
-                            '<td style="text-align: center">' + data.finshDate + '</td>' +
-                            '<td style="text-align: center">' +
-                            '<div class="am-btn-toolbar" style="text-align: center">' +
-                            '<div class="am-btn-group am-btn-group-xs">' +
-                            '<button class="am-btn am-btn-default am-btn-xs am-text-secondary am-round">' +
-                            '<span class="am-icon-pencil-square-o"> 编辑</span>' +
-                            '</button>' +
-                            '<button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only am-round">' +
-                            '<span class="am-icon-trash-o">删除</span>' +
-                            '</button></div></div></td>' +
-                            '</tr>'
-                        );
-                    });
+                    var kind;
+                    if (result.list.type.kind == 0){
+                        kind = "自行车";
+                    }else{
+                        kind = "电动车";
+                    }
+                    var state;
+                    if(result.list.state == 0){
+                        state = "等待维修";
+                    }else if(result.list.state == 1){
+                        state = "正在维修";
+                    }else if(result.list.state == 2){
+                        state = "已被预约";
+                    }else if(result.list.state == 3){
+                        state = "正被使用";
+                    }else if(result.list.state == 4){
+                        state = "可以使用";
+                    }
+                    $("#reptbody").append(
+                        '<tr>' +
+                        '<td class="am-u-lg-3"  style="text-align: center">' + result.list.bikeId + '</td>' +
+                        '<td class="am-u-lg-3"  style="text-align: center">' + state + '</td>' +
+                        '<td class="am-u-lg-3"  style="text-align: center">' + result.list.startTime + '</td>' +
+                        '<td class="am-u-lg-3"  style="text-align: center">' + result.list.type.supplier+','+kind+'</td>' +
+                        '</tr>'
+                    );
                 }
             }
-        })
-    })
-    $("#check").click(function () {
-        var mydata = {}
-        mydata.bDate = $("#my-start").val()
-        mydata.eDate =  $("#my-end").val()
-        $.ajax({
-            type: "post",
-            url: "/repair/getRepairFinshRecords",
-            data:JSON.stringify(mydata),
-            contentType: "application/json;charset=utf-8",
-            success: function (result) {
-                console.log(result)
-                if (result.code == 100) {
-                    alert(result.msg);
-                } else {
-                    $("#reptbody").empty();
-                    $.each(result.list, function (index, data) {
-                        $("#reptbody").append(
-                            '<tr>' +
-                            '<td style="text-align: center">' + data.id + '</td>' +
-                            '<td style="text-align: center">' + data.bikeId + '</td>' +
-                            '<td style="text-align: center">' + data.userId + '</td>' +
-                            '<td style="text-align: center">' + data.repairDate + '</td>' +
-                            '<td style="text-align: center">' + data.finshDate + '</td>' +
-                            '<td style="text-align: center">' +
-                            '<div class="am-btn-toolbar" style="text-align: center">' +
-                            '<div class="am-btn-group am-btn-group-xs">' +
-                            '<button class="am-btn am-btn-default am-btn-xs am-text-secondary am-round">' +
-                            '<span class="am-icon-pencil-square-o"> 编辑</span>' +
-                            '</button>' +
-                            '<button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only am-round">' +
-                            '<span class="am-icon-trash-o">删除</span>' +
-                            '</button></div></div></td>' +
-                            '</tr>'
-                        );
-                    });
-                }
-            }
-        })
+        });
     })
     /*]]>*/
+
 </script>
 </body>
 

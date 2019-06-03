@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>登陆</title>
+    <link rel="stylesheet" href="/css/login.css"/>
+</head>
+<body>
+<body class="drag">
+<div id="login">
+    <h1>用户注册</h1>
+    <label style="color: #fff; text-shadow:0 0 20px; letter-spacing: 1px; text-align: center;">请输入手机号：</label>
+    <input type="number" required oninvalid="setCustomValidity('请输入账号');" placeholder="用户名(手机号)" id="phone"></input>
+    <label>请输入密码：</label>
+    <input type="password" required oninvalid="setCustomValidity('请输入密码');" placeholder="密码" id="password"></input>
+    <label>请再次输入密码：</label>
+    <input type="password" required oninvalid="setCustomValidity('请再次输入密码');" placeholder="密码" id="repassword"></input>
+    <button class="butt" id="register">注册</button>
+</div>
+</body>
+<script src="/js/jquery.min.js"></script>
+<script>
+
+</script>
+</body>
+</html>

@@ -82,7 +82,20 @@ public class AdminController {
         }
         return utillist;
     }
-
+    @ResponseBody
+    @RequestMapping(value = "/addBikeType")
+    public String addBikeType(@RequestBody BikeType type) {
+        int a = adminServiceImp.addBikeType(type);
+        String msg;
+        if (a == 0) {
+            msg = "已存在该车型";
+        } else if (a == 1) {
+            msg = "添加成功";
+        }else{
+            msg = "发生未知错误";
+        }
+        return msg;
+    }
 
 
 

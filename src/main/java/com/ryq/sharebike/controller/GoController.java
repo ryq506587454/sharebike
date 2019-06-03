@@ -16,6 +16,10 @@ public class GoController {
     public String login(){
         return "login";
     }
+    @RequestMapping(value = "/register")
+    public String register(){
+        return "register";
+    }
     @RequestMapping(value = "/waitRepairBike")
     public String waitRepairBike(){
         return "waitRepairBike";
@@ -50,6 +54,10 @@ public class GoController {
     public String AdminaAddBike(){return "AdminaAddBike";}
     @RequestMapping ( value = "AdminFindAllBike")
     public String AdminFindAllBike(){return "AdminFindAllBike";}
+    @RequestMapping(value = "AdminaAddBikeType")
+    public String AdminaAddBikeType(){return "AdminaAddBikeType";}
+    @RequestMapping(value = "AdminFindBikeByDetail")
+    public String AdminFindBikeByDetail(){return "AdminFindBikeByDetail";}
 
 
 }
