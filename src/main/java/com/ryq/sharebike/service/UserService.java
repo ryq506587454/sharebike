@@ -36,7 +36,8 @@ public interface UserService {
     int reportRepair(int bikeId);
     //用户查重
     User check(Long phone);
-
+    //查询正在使用的车的记录
+    UseBike findUseingBike(int userId);
 
 
 }

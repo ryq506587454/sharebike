@@ -200,6 +200,11 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
+    public UseBike findUseingBike(int userId) {
+        return userMapper.findUseingBike(userId);
+    }
+
+    @Override
     public Page<UseBike> findUseRecord(int pageNo, int pageSize,int userId) {
         PageHelper.startPage(pageNo,pageSize);
         return userMapper.findUseRecord(userId);

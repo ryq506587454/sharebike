@@ -45,7 +45,7 @@
                         class="tpl-header-list-user-ico"> <img src="assets/img/user01.png"></span>
                 </a>
             </li>
-            <li><a id = "quit" class="tpl-header-list-link"><span
+            <li><a id="quit" class="tpl-header-list-link"><span
                     class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
         </ul>
     </div>
@@ -116,7 +116,7 @@
                         <fieldset>
                             <legend>请输入车辆编号</legend>
                             <div class="am-form-group">
-                                <label >车辆编号</label>
+                                <label>车辆编号</label>
                                 <input type="number" class="am-form-field am-radius" id="bikeId" placeholder="输入车辆编号">
                             </div>
                             <p>
@@ -145,6 +145,8 @@
 <script src="js/my.js" th:inline="javascript"></script>
 <script th:inline="javascript">
     /*<![CDATA[*/
+    var intDiff = 0; //倒计时总秒数量
+    var InterValObj;
     var user = /*[[${session.user}]]*/ null;
     if (user == null) {
         alert("请先登录");
@@ -152,18 +154,48 @@
     } else {
         $('#userName').text(user.userName);
     }
-    $('#useBike').click(function () {
-        var mydata = {}
-        mydata.bikeId = $('#bikeId').val()
+    $(function () {
         $.ajax({
             type: "post",
-            url: "/user/useBike",
-            data: JSON.stringify(mydata),
+            url: "/user/findUsingBike",
             contentType: "application/json;charset=utf-8",
             success: function (result) {
-                alert(result)
+                if(result == null||result==""){
+                    $('#useBike').removeAttr('disabled');
+                    $('#bikeId').removeAttr('disabled');
+                }else{
+                    $("#bikeId").attr("value", result.bikeId);
+                    $('#useBike').attr('disabled','disabled');
+                    $('#bikeId').attr('disabled','disabled');
+                    intDiff = result.time
+                    begin()
+                }
             }
         })
+    })
+    $('#useBike').click(function () {
+        if($('#bikeId').val()==null||$('#bikeId').val()==" "){
+            alert("请先输入车辆编号")
+        }else{
+            var mydata = {}
+            mydata.bikeId = $('#bikeId').val()
+            $.ajax({
+                type: "post",
+                url: "/user/useBike",
+                data: JSON.stringify(mydata),
+                contentType: "application/json;charset=utf-8",
+                success: function (result) {
+                    if (result == "开锁成功，开始计时") {
+                        alert(result)
+                        $('#useBike').attr('disabled','disabled');
+                        $('#bikeId').attr('disabled','disabled');
+                        begin()
+                    } else {
+                        alert(result)
+                    }
+                }
+            })
+        }
     })
     $('#backBike').click(function () {
         $.ajax({
@@ -171,10 +203,37 @@
             url: "/user/backBike",
             contentType: "application/json;charset=utf-8",
             success: function (result) {
-                alert(result)
+                if (result == "还车成功") {
+                    alert(result)
+                    window.location.href = "UserInfo"
+                } else {
+                    alert(result)
+                }
             }
         })
     })
+
+    function begin() {
+        InterValObj = window.setInterval(function () {
+            var day = 0,
+                hour = 0,
+                minute = 0,
+                second = 0; //时间默认值
+            if (intDiff > 0) {
+                hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+                minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+                second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+            }
+            if (minute <= 9) minute = '0' + minute;
+            if (second <= 9) second = '0' + second;
+            $('#hour_show').html('<s></s>' + hour + '时');
+            $('#minute_show').html('<s></s>' + minute + '分');
+            $('#second_show').html('<s></s>' + second + '秒');
+            intDiff++;
+        }, 1000);
+
+    }
+
     /*]]>*/
 </script>
 </body>

@@ -147,4 +147,8 @@
     <select id="findUserByPhone" resultMap="userInfo">
         select * from user where phone = #{phone};
     </select>
+    <!--UseBike findUseingBike(@Param("userId") int userId);-->
+    <select id="findUseingBike" resultType="com.ryq.sharebike.pojo.UseBike">
+        select * from use_bike where userId = #{userId} and backDate is null ;
+    </select>
 </mapper>

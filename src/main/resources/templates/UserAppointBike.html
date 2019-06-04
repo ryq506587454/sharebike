@@ -45,7 +45,7 @@
                         class="tpl-header-list-user-ico"> <img src="assets/img/user01.png"></span>
                 </a>
             </li>
-            <li><a id = "quit" class="tpl-header-list-link"><span
+            <li><a id="quit" class="tpl-header-list-link"><span
                     class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
         </ul>
     </div>
@@ -116,7 +116,7 @@
                         <fieldset>
                             <legend>请输入车辆编号</legend>
                             <div class="am-form-group">
-                                <label >车辆编号</label>
+                                <label>车辆编号</label>
                                 <input type="number" class="am-form-field am-radius" id="bikeId" placeholder="输入车辆编号">
                             </div>
                             <p>
@@ -153,29 +153,42 @@
         $('#userName').text(user.userName);
     }
     $('#appo').click(function () {
-        begin()
-        var mydata = {
-            bikeId : $('#bikeId').val()
-        }
-        $('#bikeId').disable(true);
-        $.ajax({
-            type: "post",
-            url: "/user/appoBike",
-            data: JSON.stringify(mydata),
-            contentType: "application/json;charset=utf-8",
-            success: function (result) {
-                alert(result)
+        if ($('#bikeId').val() == null || $('#bikeId').val() == " ") {
+            alert("请先输入车辆编号")
+        } else {
+            var mydata = {
+                bikeId: $('#bikeId').val()
             }
-        })
+            $.ajax({
+                type: "post",
+                url: "/user/appoBike",
+                data: JSON.stringify(mydata),
+                contentType: "application/json;charset=utf-8",
+                success: function (result) {
+                    if (result == "预约成功，开始计时") {
+                        alert(result)
+                        $('#bikeId').attr("disabled", "disabled")
+                        $('#appo').attr("disabled", "disabled")
+                        begin()
+                    } else {
+                        alert(result)
+                        $("#bikeId").removeAttr("disabled");
+                        $('#appo').removeAttr("disabled");
+                    }
+
+                }
+            })
+        }
+
     });
     $("#finshAppo").click(function () {
-        appoint(1)
-        $('#bikeId').disable(false);
-        window.location.href = "UserIndex"
+        finishappoint(1)
+
     });
-    function appoint(Flag) {
+
+    function finishappoint(Flag) {
         var mydata = {
-            timeFlag : Flag
+            timeFlag: Flag
         }
         $.ajax({
             type: "post",
@@ -183,12 +196,24 @@
             data: JSON.stringify(mydata),
             contentType: "application/json;charset=utf-8",
             success: function (result) {
-                alert(result)
+                if (Flag = 1) {
+                    alert(result)
+                    $("#bikeId").removeAttr("disabled");
+                    $('#appo').removeAttr("disabled");
+                    window.location.href = "UserIndex"
+                } else {
+                    alert(result)
+                    $("#bikeId").removeAttr("disabled");
+                    $('#appo').removeAttr("disabled");
+                    window.location.href = "UserIndex"
+                }
+
             }
         })
     }
+
     function begin() {
-        InterValObj = window.setInterval(function() {
+        InterValObj = window.setInterval(function () {
             var day = 0,
                 hour = 0,
                 minute = 0,
@@ -205,14 +230,13 @@
             $('#second_show').html('<s></s>' + second + '秒');
             if (intDiff < 0) {
                 window.clearInterval(InterValObj);
-                appoint(0);
-                $('#bikeId').disable(false);
-                window.location.href = "UserIndex"
+                finishappoint(0);
             }
             intDiff--;
         }, 1000);
 
     }
+
     /*]]>*/
 </script>
 </body>

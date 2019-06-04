@@ -50,6 +50,8 @@ public interface UserMapper extends CommnMapper<User>{
     Page<UseBike> findUseRecord(@Param("userId") int userId);
     //根据用户手机号查找
     User findUserByPhone(@Param("phone") Long phone);
+    //查询用户正在使用的车
+    UseBike findUseingBike(@Param("userId") int userId);
 
 
 

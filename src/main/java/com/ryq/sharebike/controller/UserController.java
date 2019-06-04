@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
-import java.util.List;
+import java.util.*;
 
 @Controller
 @RequestMapping(value = "/user")
@@ -60,7 +60,23 @@ public class UserController {
             return "0";
         }
     }
+    @RequestMapping(value = "/findUsingBike")
+    @ResponseBody
+    public Map<String,Object> findUsingBike(HttpSession session){
+        User u = (User) session.getAttribute("user");
+        UseBike useBike = userServiceImp.findUseingBike(u.getUserId());
+        if(useBike==null){
+            return null;
+        }else{
+            Map<String,Object> map = new HashMap<>();
+            long time = ((new Date().getTime() - useBike.getBorrowDate().getTime())/1000)+1;
+            int bikeId = useBike.getBikeId();
+            map.put("time",time);
+            map.put("bikeId",bikeId);
+            return map;
+        }
 
+    }
     @RequestMapping(value = "/useBike")
     @ResponseBody
     public String useBike(@RequestBody JSONObject data, HttpSession session) {
@@ -102,6 +118,7 @@ public class UserController {
         System.out.println(msg);
         return msg;
     }
+
 
     @RequestMapping(value = "/appoBike")
     @ResponseBody
@@ -158,7 +175,7 @@ public class UserController {
                 msg = "出现未知错误";
                 break;
             default:
-                msg = "还车成功,共花费 " + a + " 元";
+                msg = "还车成功";
                 session.setAttribute("user", userServiceImp.Login(user));
         }
         System.out.println(msg);
