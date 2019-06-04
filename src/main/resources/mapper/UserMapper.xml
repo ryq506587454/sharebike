@@ -141,6 +141,10 @@
     </select>
     <!--List<UseBike> findUseRecord(@Param("userId") int userId);-->
     <select id="findUseRecord" resultType="com.ryq.sharebike.pojo.UseBike">
-        select * from use_bike where userId = #{userId} and backDate is not null;
+        select * from use_bike where userId = #{userId} and backDate is not null
+    </select>
+    <!--User findUserByPhone(@Param("phone") int phone);-->
+    <select id="findUserByPhone" resultMap="userInfo">
+        select * from user where phone = #{phone};
     </select>
 </mapper>

@@ -5,23 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>登陆</title>
     <link rel="stylesheet" href="/css/login.css"/>
+    <style type="text/css">
+        label {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 10px;
+            letter-spacing: 2px;
+            text-align: center;
+            font-family: "微软雅黑";
+        }
+    </style>
 </head>
-<body>
 <body class="drag">
-<div id="login">
+<div id="login" style="margin-top: -250px;">
     <h1>用户注册</h1>
-    <label style="color: #fff; text-shadow:0 0 20px; letter-spacing: 1px; text-align: center;">请输入手机号：</label>
-    <input type="number" required oninvalid="setCustomValidity('请输入账号');" placeholder="用户名(手机号)" id="phone"></input>
+    <label>请输入手机号：</label>
+    <input type="number" name="phone" required oninvalid="setCustomValidity('请输入账号');" placeholder="用户名(手机号)"
+           id="phoneId"/>
+    <label>请输入姓名：</label>
+    <input type="text" name="userName" required oninvalid="setCustomValidity('请输入姓名');" placeholder="姓名"
+           id="userName"/>
     <label>请输入密码：</label>
-    <input type="password" required oninvalid="setCustomValidity('请输入密码');" placeholder="密码" id="password"></input>
+    <input type="password" name="password" required oninvalid="setCustomValidity('请输入密码');" placeholder="密码"
+           id="password"/>
     <label>请再次输入密码：</label>
-    <input type="password" required oninvalid="setCustomValidity('请再次输入密码');" placeholder="密码" id="repassword"></input>
-    <button class="butt" id="register">注册</button>
+    <input type="password" required oninvalid="setCustomValidity('请再次输入密码');" placeholder="请再次输入密码" id="repassword"/>
+    <button class="butt" id="sub">注册</button>
 </div>
-</body>
 <script src="/js/jquery.min.js"></script>
 <script>
+    $('#phoneId').blur(function () {
+        if ($('#phoneId').val() == null || $('#phoneId').val() == "") {
+            alert("请先输入手机号")
+        } else if (!(/^1(3|4|5|7|8)\d{9}$/.test(($('#phoneId').val())))) {
+            alert("手机号码有误，请检查");
+        } else {
+            var mydata = {}
+            mydata.phone = $('#phoneId').val()
+            $.ajax({
+                type: "post",
+                url: "/user/check",
+                contentType: "application/json;charset=utf-8",
+                data: JSON.stringify(mydata),
+                success: function (result) {
+                    if (result == "1") {
+                        alert("该手机号可以注册");
+                        $('#sub').attr("disabled", false);
+                    } else {
+                        alert("该手机号已被注册");
+                        $('#sub').attr("disabled", true);
+                    }
+                }
+            })
+        }
+    })
+    $("#sub").click(function () {
+        if ($('#phoneId').val() == null || $('#phoneId').val() == "") {
+            alert("手机号不能为空，请输入手机号")
+        } else if (!(/^1(3|4|5|7|8)\d{9}$/.test(($('#phoneId').val())))) {
+            alert("手机号码有误，请检查");
+        }else if($("#userName").val() == null || $("#userName").val() == ""){
+            alert("用户姓名不能为空，请输入姓名");
+        } else if ($("#repassword").val() == null || $("#password").val() == null || $("#password").val() == "" || $("#repassword").val() == "") {
+            alert("密码不能为空，请输入密码")
+        } else {
+            if ($("#repassword").val() == $("#password").val()) {
+                var mydata = {
+                    userName: $("#userName").val(),
+                    password: $("#password").val(),
+                    phone: $("#phoneId").val()
+                }
+                $.ajax({
+                    type: "post",
+                    url: "/user/register",
+                    contentType: "application/json;charset=utf-8",
+                    data: JSON.stringify(mydata),
+                    success: function (result) {
+                        if (result == "1") {
+                            alert("注册成功");
+                            $.ajax({
+                                type: "post",
+                                url: "/user/login",
+                                contentType: "application/json;charset=utf-8",
+                                data: JSON.stringify(mydata),
+                                success: function (result) {
+                                    location.href = "UserIndex";
+                                }
+                            })
+                        } else {
+                            alert("注册失败，发生未知错误");
+                        }
+                    }
+                })
 
+            } else {
+                alert("两次密码不相同,请重新输入");
+            }
+        }
+    })
 </script>
 </body>
 </html>

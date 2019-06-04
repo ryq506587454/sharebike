@@ -28,6 +28,8 @@ public interface AdminService {
     List<User> findUserByRegister(Date bDate,Date eDate);
     //根据用户车辆ID查询
     Bike findBikeByBikeId(int bikeId);
+    //查看所有用户信息
+    Page<User> findAllUser(int pageNo,int pageSize,int grade);
 
 
 

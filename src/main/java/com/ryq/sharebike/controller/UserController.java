@@ -4,11 +4,14 @@ package com.ryq.sharebike.controller;
  */
 
 import com.alibaba.fastjson.JSONObject;
+import com.github.pagehelper.Page;
 import com.ryq.sharebike.pojo.RechargeRecord;
 import com.ryq.sharebike.pojo.UseBike;
 import com.ryq.sharebike.pojo.User;
 import com.ryq.sharebike.serviceImp.UserServiceImp;
+import com.ryq.sharebike.util.PageInfo;
 import com.ryq.sharebike.util.Utillist;
+import com.sun.org.apache.regexp.internal.RE;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +41,8 @@ public class UserController {
         this.utillist = utillist;
     }
 
+    private int pageSize = 4;
+
     @ResponseBody
     @RequestMapping(value = "/login")
     public String login(@RequestBody User user, HttpSession session) {
@@ -61,7 +66,7 @@ public class UserController {
     public String useBike(@RequestBody JSONObject data, HttpSession session) {
         String msg;
         User userInfo = (User) session.getAttribute("user");
-        if ((userInfo.getState() == 0||userInfo.getState() == 2) && userInfo.getBalance() > 0) {
+        if ((userInfo.getState() == 0 || userInfo.getState() == 2) && userInfo.getBalance() > 0) {
             switch (userServiceImp.useBike(userInfo.getUserId(), data.getInteger("bikeId"))) {
                 case 0:
                     msg = "开锁失败,所选车辆已被报修";
@@ -190,33 +195,35 @@ public class UserController {
 
     @ResponseBody
     @RequestMapping(value = "/getRechargeRecord")
-    public Utillist<?> getRechargeRecord(HttpSession session) {
+    public Utillist<?> getRechargeRecord(@RequestBody JSONObject data,HttpSession session) {
         User user = (User) session.getAttribute("user");
-        List<RechargeRecord> rechargeRecords = userServiceImp.findRechargeRecord(user.getUserId());
+        Page<RechargeRecord> rechargeRecords = userServiceImp.findRechargeRecord(data.getInteger("page"),pageSize,user.getUserId());
+        PageInfo<RechargeRecord> pageInfo = new PageInfo<>(rechargeRecords);
         if (rechargeRecords == null || rechargeRecords.size() == 0) {
-            utillist = Utillist.CreatUtillist("无充值记录", rechargeRecords, 100);
+            utillist = Utillist.CreatUtillist("无充值记录", pageInfo, 100);
         } else {
-            utillist = Utillist.CreatUtillist("充值记录", rechargeRecords, 101);
+            utillist = Utillist.CreatUtillist("充值记录", pageInfo, 101);
         }
         return utillist;
     }
 
     @ResponseBody
     @RequestMapping(value = "/getUsegeRecord")
-    public Utillist<?> getUsegeRecord(HttpSession session) {
+    public Utillist<?> getUsegeRecord(@RequestBody JSONObject data,  HttpSession session) {
         User user = (User) session.getAttribute("user");
-        List<UseBike> useBikes = userServiceImp.findUseRecord(user.getUserId());
+        List<UseBike> useBikes = userServiceImp.findUseRecord(data.getInteger("page"),pageSize,user.getUserId());
+        PageInfo<UseBike> pageInfo = new PageInfo<>(useBikes);
         if (useBikes == null || useBikes.size() == 0) {
-            utillist = Utillist.CreatUtillist("无充值记录", useBikes, 100);
+            utillist = Utillist.CreatUtillist("无充值记录", pageInfo, 100);
         } else {
-            utillist = Utillist.CreatUtillist("充值记录", useBikes, 101);
+            utillist = Utillist.CreatUtillist("充值记录", pageInfo, 101);
         }
         return utillist;
     }
 
     @ResponseBody
     @RequestMapping(value = "/finshAppo")
-    public String finshAppo(@RequestBody JSONObject data,HttpSession session) {
+    public String finshAppo(@RequestBody JSONObject data, HttpSession session) {
         int timeFlag = data.getInteger("timeFlag");
         User user = (User) session.getAttribute("user");
         String msg;
@@ -231,6 +238,7 @@ public class UserController {
                     break;
                 default:
                     msg = "预约时间超时,自动取消预约";
+                    session.setAttribute("user", userServiceImp.Login(user));
             }
         } else if (timeFlag == 1) {
             switch (bikeId) {
@@ -252,5 +260,28 @@ public class UserController {
         return msg;
     }
 
+    @RequestMapping(value = "/check")
+    @ResponseBody
+    public String check(@RequestBody JSONObject data) {
+        User u = userServiceImp.check(data.getLong("phone"));
+        if (u == null) {
+            return "1";
+        } else {
+            return "-1";
+        }
+    }
+
+    @RequestMapping(value = "/register")
+    @ResponseBody
+    public String register(@RequestBody User user) {
+        user.setState(0);
+        user.setGrade(0);
+        int a = userServiceImp.Register(user);
+        if (a == 1) {
+            return "1";
+        } else {
+            return "-1";
+        }
+    }
 
 }

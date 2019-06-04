@@ -1,5 +1,7 @@
 package com.ryq.sharebike.serviceImp;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.ryq.sharebike.dao.BikeMapper;
 import com.ryq.sharebike.dao.UserMapper;
 import com.ryq.sharebike.pojo.*;
@@ -168,7 +170,8 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
-    public List<RechargeRecord> findRechargeRecord(int userId) {
+    public Page<RechargeRecord> findRechargeRecord(int pageNo, int pageSize,int userId) {
+        PageHelper.startPage(pageNo,pageSize);
         return userMapper.findRechargeRecord(userId);
     }
 
@@ -192,7 +195,13 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
-    public List<UseBike> findUseRecord(int userId) {
+    public User check(Long phone) {
+        return userMapper.findUserByPhone(phone);
+    }
+
+    @Override
+    public Page<UseBike> findUseRecord(int pageNo, int pageSize,int userId) {
+        PageHelper.startPage(pageNo,pageSize);
         return userMapper.findUseRecord(userId);
     }
 

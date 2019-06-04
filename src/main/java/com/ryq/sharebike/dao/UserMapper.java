@@ -1,5 +1,6 @@
 package com.ryq.sharebike.dao;
 
+import com.github.pagehelper.Page;
 import com.ryq.sharebike.pojo.*;
 import com.ryq.sharebike.util.CommnMapper;
 import org.apache.ibatis.annotations.Mapper;
@@ -42,11 +43,13 @@ public interface UserMapper extends CommnMapper<User>{
     //添加充值记录
     int addRechargeRecord(@Param("userId") int userId,@Param("rechargeTime") Date rechargeTime, @Param("money") float money);
     //查询充值记录
-    List<RechargeRecord> findRechargeRecord(@Param("userId") int userId);
+    Page<RechargeRecord> findRechargeRecord(@Param("userId") int userId);
     //查询支付记录
-    List<PaymentRecord> findPaymentRecord(@Param("userId") int userId);
+    Page<PaymentRecord> findPaymentRecord(@Param("userId") int userId);
     //查询用车记录
-    List<UseBike> findUseRecord(@Param("userId") int userId);
+    Page<UseBike> findUseRecord(@Param("userId") int userId);
+    //根据用户手机号查找
+    User findUserByPhone(@Param("phone") Long phone);
 
 
 

@@ -1,5 +1,6 @@
 package com.ryq.sharebike.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.ryq.sharebike.pojo.Bike;
 import com.ryq.sharebike.pojo.RepairRecord;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -95,6 +97,26 @@ public class RepairController {
         } else {
             msg = "出现未知错误";
             System.out.println("出现未知错误");
+        }
+        return msg;
+    }
+    @ResponseBody
+    @RequestMapping(value = "/finishRepair")
+    public String finishRepair(@RequestBody JSONObject data, HttpSession session)
+    {
+        String msg;
+        int a = repairmenServiceImp.finshRepair(data.getInteger("userId"),data.getInteger("bikeId"));
+        if (a == 0) {
+            msg = "无该车信息";
+        } else if (a == 1) {
+            msg = "该车未处于维修状态";
+        } else if (a == 2) {
+            msg = "维修完成";
+        } else if(a == 3){
+            msg = "没有该车的维修记录";
+
+        }else {
+            msg = "出现未知错误";
         }
         return msg;
     }

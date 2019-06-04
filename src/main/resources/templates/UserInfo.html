@@ -140,6 +140,14 @@
                     <tbody id="useRecordtbody">
                     </tbody>
                 </table>
+                <div class="am-cf">
+                    <div class="am-fr">
+                        <ul class="am-pagination tpl-pagination">
+                            <li id="shangli1" class="am-disabled"><a href="#" id="shang1">«</a></li>
+                            <li id="xiali1" class="am-disabled"><a href="#" id="xia1">»</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <h2 style="color: #19a7f0;font-weight: bold">充值记录</h2>
             <div class="am-g" id="rechRecordtable" style="text-align: center">
@@ -155,6 +163,14 @@
                     </tbody>
                 </table>
             </div>
+            <div class="am-cf">
+                <div class="am-fr">
+                    <ul class="am-pagination tpl-pagination">
+                        <li id="shangli2" class="am-disabled"><a href="#" id="shang2">«</a></li>
+                        <li id="xiali2" class="am-disabled"><a href="#" id="xia2">»</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="tpl-alert"></div>
         </div>
     </div>
@@ -166,21 +182,30 @@
 <script th:inline="javascript">
     /*<![CDATA[*/
     var user = /*[[${session.user}]]*/ null;
-    $(function () {
-        if (user == null) {
-            alert("请先登录");
-            window.location.href = "login"
-        } else {
-            $('#userName').text(user.userName);
-        }
+    var usePage = 1;
+    var mydata1 = {}
+    function loadUseRecords(){
+        mydata1.page = usePage
         $.ajax({
             type: "post",
             url: "/user/getUsegeRecord",
             contentType: "application/json;charset=utf-8",
+            data:JSON.stringify(mydata1),
             success: function (result) {
+                console.log(result)
+                if(result.list.isFirstPage){
+                    $("#shangli1").addClass("am-disabled")
+                }else{
+                    $("#shangli1").removeClass("am-disabled")
+                }
+                if(result.list.isLastPage){
+                    $("#xiali1").addClass("am-disabled")
+                }else{
+                    $("#xiali1").removeClass("am-disabled")
+                }
                 if(result.code == 101){
                     $("#useRecordtbody").empty();
-                    $.each(result.list, function (index, data) {
+                    $.each(result.list.list, function (index, data) {
                         $("#useRecordtbody").append(
                             '<tr>' +
                             '<td class="am-u-lg-2" style="text-align: center">' + data.id + '</td>' +
@@ -199,14 +224,38 @@
                 }
             }
         });
+    }
+    $("#shang1").click(function () {
+        usePage = usePage - 1;
+        loadUseRecords();
+    });
+    $("#xia1").click(function () {
+        usePage = usePage + 1;
+        loadUseRecords();
+    });
+    var charegePage = 1;
+    var mydata2 = {}
+    function loadRechargeRecords(){
+        mydata2.page = charegePage
         $.ajax({
             type: "post",
             url: "/user/getRechargeRecord",
             contentType: "application/json;charset=utf-8",
+            data:JSON.stringify(mydata2),
             success: function (result) {
+                if(result.list.isFirstPage){
+                    $("#shangli2").addClass("am-disabled")
+                }else{
+                    $("#shangli2").removeClass("am-disabled")
+                }
+                if(result.list.isLastPage){
+                    $("#xiali2").addClass("am-disabled")
+                }else{
+                    $("#xiali2").removeClass("am-disabled")
+                }
                 if(result.code == 101){
                     $("#rechRecordtbody").empty();
-                    $.each(result.list, function (index, data) {
+                    $.each(result.list.list, function (index, data) {
                         $("#rechRecordtbody").append(
                             '<tr>' +
                             '<td class="am-u-lg-offset-1 am-u-lg-2" style="text-align: center">' + data.id + '</td>' +
@@ -223,7 +272,24 @@
                 }
             }
         });
-
+    }
+    $("#shang2").click(function () {
+        charegePage = charegePage - 1;
+        loadRechargeRecords();
+    });
+    $("#xia2").click(function () {
+        charegePage = charegePage + 1;
+        loadRechargeRecords();
+    });
+    $(function () {
+        if (user == null) {
+            alert("请先登录");
+            window.location.href = "login"
+        } else {
+            $('#userName').text(user.userName);
+        }
+        loadUseRecords()
+        loadRechargeRecords()
     })
     /*<![CDATA[*/
 </script>

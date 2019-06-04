@@ -46,16 +46,16 @@ public class AdminBusTest {
 //        System.out.println(bikeTypes.size());
 //    }
 
-    @Test
-    public void addBikeType() {
-        BikeType type = new BikeType(1, "天工大");
-        int a = adminServiceImp.addBikeType(type);
-        if (a == 0) {
-            System.out.println("已存在该车型");
-        } else if (a == 1) {
-            System.out.println("添加成功");
-        }
-    }
+//    @Test
+//    public void addBikeType() {
+//        BikeType type = new BikeType(1, "天工大");
+//        int a = adminServiceImp.addBikeType(type);
+//        if (a == 0) {
+//            System.out.println("已存在该车型");
+//        } else if (a == 1) {
+//            System.out.println("添加成功");
+//        }
+//    }
 
     @Test
     public void findUser() {
@@ -69,17 +69,17 @@ public class AdminBusTest {
         }
     }
 
-    @Test
-    public void findBrokeBike() {
-        List<Bike> bikes = adminServiceImp.findBrokeBike();
-        if (bikes == null || bikes.size() == 0){
-            System.out.println("目前无待修车辆");
-        }else{
-            for (Bike bike : bikes) {
-                System.out.println(bike.toString());
-            }
-        }
-    }
+//    @Test
+//    public void findBrokeBike() {
+//        List<Bike> bikes = adminServiceImp.findBrokeBike();
+//        if (bikes == null || bikes.size() == 0){
+//            System.out.println("目前无待修车辆");
+//        }else{
+//            for (Bike bike : bikes) {
+//                System.out.println(bike.toString());
+//            }
+//        }
+//    }
 
 //    @Test
 //    public void beginRepair(){

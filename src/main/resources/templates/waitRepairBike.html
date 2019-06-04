@@ -59,20 +59,20 @@
         <div class="tpl-left-nav-list">
             <ul class="tpl-left-nav-menu">
                 <li class="tpl-left-nav-item">
-                    <a href="index" class="nav-link active">
+                    <a href="index" class="nav-link ">
                         <i class="am-icon-home"></i>
                         <span>首页</span>
                     </a>
                 </li>
                 <li class="tpl-left-nav-item">
-                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list active">
                         <i class="am-icon-table"></i>
                         <span>维修管理</span>
                         <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
                     </a>
                     <ul class="tpl-left-nav-sub-menu">
                         <li>
-                            <a href="waitRepairBike">
+                            <a href="waitRepairBike" class="active">
                                 <i class="am-icon-angle-right"></i>
                                 <span>查看待维修车辆</span>
                             </a>
@@ -129,7 +129,7 @@
                         <li>
                             <a href="AdminaAddBikeType">
                                 <i class="am-icon-angle-right"></i>
-                                <span>车辆种类添加</span>
+                                <span>添加车辆种类</span>
                             </a>
                         </li>
                     </ul>
@@ -150,7 +150,7 @@
                     </a>
                     <ul class="tpl-left-nav-sub-menu">
                         <li>
-                            <a href="table-font-list.html">
+                            <a href="AdminFindAllUser">
                                 <i class="am-icon-angle-right"></i>
                                 <span>用户信息管理</span>
                             </a>
@@ -187,15 +187,14 @@
                 </div>
                 <div class="am-g">
                     <div class="am-u-sm-12">
-                        <form class="am-form">
-                            <table class="am-table am-table-striped am-table-hover table-main">
+                            <table class="am-table am-table-striped am-table-hover table-main" style="text-align: center">
                                 <thead>
                                 <tr>
-                                    <th class="table-id">车辆ID</th>
-                                    <th class="table-type">自行车类型</th>
-                                    <th class="table-title">开始使用时间</th>
-                                    <th class="table-author am-hide-sm-only">供应商</th>
-                                    <th class="table-set">操作</th>
+                                    <th class="am-u-lg-2" style="text-align: center">车辆ID</th>
+                                    <th class="am-u-lg-2" style="text-align: center">自行车类型</th>
+                                    <th class="am-u-lg-3" style="text-align: center">开始使用时间</th>
+                                    <th class="am-u-lg-2" style="text-align: center">供应商</th>
+                                    <th class="am-u-lg-3" style="text-align: center">操作</th>
                                 </tr>
                                 </thead>
                                 <tbody id="reptbody">
@@ -204,19 +203,12 @@
                             <div class="am-cf">
                                 <div class="am-fr">
                                     <ul class="am-pagination tpl-pagination">
-                                        <li class="am-disabled"><a href="#">«</a></li>
-                                        <li class="am-active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">«</a></li>
                                         <li><a href="#">»</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <hr>
-
-                        </form>
                     </div>
 
                 </div>
@@ -258,19 +250,18 @@
                         }
                         $("#reptbody").append(
                             '<tr>' +
-                            '<td>' + data.bikeId + '</td>' +
-                            '<td>' + kind + '</td>' +
-                            '<td>' + data.startTime + '</td>' +
-                            '<td>' + data.type.supplier + '</td>' +
-                            '<td>' +
-                            '<div class="am-btn-toolbar">' +
+                            '<td class="am-u-lg-2">' + data.bikeId + '</td>' +
+                            '<td class="am-u-lg-2">' + kind + '</td>' +
+                            '<td class="am-u-lg-3">' + data.startTime + '</td>' +
+                            '<td class="am-u-lg-2">' + data.type.supplier + '</td>' +
+                            '<td class="am-u-lg-3">' +
                             '<div class="am-btn-group am-btn-group-xs">' +
                             '<button class="am-btn am-btn-default am-btn-xs am-text-secondary am-round">' +
-                            '<span class="am-icon-pencil-square-o"> 编辑</span>' +
+                            '<span class="am-icon-pencil-square-o"> 维修</span>' +
                             '</button>' +
                             '<button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only am-round">' +
                             '<span class="am-icon-trash-o">删除</span>' +
-                            '</button></div></div></td>' +
+                            '</button></div></td>' +
                             '</tr>'
                         );
                     });

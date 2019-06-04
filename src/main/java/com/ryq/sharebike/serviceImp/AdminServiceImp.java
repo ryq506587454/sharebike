@@ -95,4 +95,10 @@ public class AdminServiceImp implements AdminService {
         return bikeMapper.getBikeById(bikeId);
     }
 
+    @Override
+    public Page<User> findAllUser(int pageNo, int pageSize,int grade) {
+        PageHelper.startPage(pageNo,pageSize);
+        return statisticMapper.findAllUser(grade);
+    }
+
 }

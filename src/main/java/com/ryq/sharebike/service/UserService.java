@@ -1,5 +1,6 @@
 package com.ryq.sharebike.service;
 
+import com.github.pagehelper.Page;
 import com.ryq.sharebike.pojo.PaymentRecord;
 import com.ryq.sharebike.pojo.RechargeRecord;
 import com.ryq.sharebike.pojo.UseBike;
@@ -26,13 +27,15 @@ public interface UserService {
     //充值
     int Recharge(int userId,float money);
     //查询用户充值记录
-    List<RechargeRecord> findRechargeRecord(int userId);
+    Page<RechargeRecord> findRechargeRecord(int pageNo, int pageSize,int userId);
     //查询支付记录
     List<PaymentRecord> findPaymentRecord(int userId);
     //查询用户用车记录
-    List<UseBike> findUseRecord(int userId);
+    Page<UseBike> findUseRecord(int pageNo, int pageSize,int userId);
     //车辆报修
     int reportRepair(int bikeId);
+    //用户查重
+    User check(Long phone);
 
 
 

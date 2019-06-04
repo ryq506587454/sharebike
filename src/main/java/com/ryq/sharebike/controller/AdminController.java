@@ -5,6 +5,7 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.ryq.sharebike.pojo.Bike;
 import com.ryq.sharebike.pojo.BikeType;
+import com.ryq.sharebike.pojo.User;
 import com.ryq.sharebike.serviceImp.AdminServiceImp;
 import com.ryq.sharebike.util.PageInfo;
 import com.ryq.sharebike.util.Utillist;
@@ -96,7 +97,19 @@ public class AdminController {
         }
         return msg;
     }
-
+    @ResponseBody
+    @RequestMapping(value = "/findAllUser")
+    public Utillist<?> findAllUser(@RequestBody JSONObject data){
+        Page<User> users = adminServiceImp.findAllUser(data.getInteger("page"),pagSize,data.getInteger("grade"));
+        PageInfo<User> pageInfo = new PageInfo<>(users);
+        if(users == null || users.size() == 0){
+            utillist = Utillist.CreatUtillist("查询失败",pageInfo,100);
+        }else{
+            utillist = Utillist.CreatUtillist("查询成功",pageInfo,101);
+        }
+        PageHelper.clearPage();
+        return utillist;
+    }
 
 
 

@@ -6,6 +6,8 @@ package com.ryq.sharebike.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.security.PublicKey;
+
 @Controller
 public class GoController {
     @RequestMapping(value = "/index")
@@ -58,6 +60,8 @@ public class GoController {
     public String AdminaAddBikeType(){return "AdminaAddBikeType";}
     @RequestMapping(value = "AdminFindBikeByDetail")
     public String AdminFindBikeByDetail(){return "AdminFindBikeByDetail";}
+    @RequestMapping(value = "AdminFindAllUser")
+    public String AdminFindAllUser(){return "AdminFindAllUser";}
 
 
 }
