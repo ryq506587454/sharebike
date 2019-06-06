@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>查看待维修车辆</title>
+    <title>SB共享单车</title>
     <meta name="description" content="这是一个 index 页面">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -152,7 +152,25 @@
                         <li>
                             <a href="AdminFindAllUser">
                                 <i class="am-icon-angle-right"></i>
-                                <span>用户信息管理</span>
+                                <span>查看用户列表</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminFindAllUser">
+                                <i class="am-icon-angle-right"></i>
+                                <span>查询用户信息</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminFindAllUser">
+                                <i class="am-icon-angle-right"></i>
+                                <span>添加维修员</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminFindAllUser">
+                                <i class="am-icon-angle-right"></i>
+                                <span>修改用户信息</span>
                             </a>
                         </li>
                     </ul>
@@ -177,16 +195,31 @@
             </div>
             <div class="tpl-block">
                 <div class="am-g">
-                    <form class="am-u-sm-12">
-                        <fieldset>
-                            <legend>请输入车辆编号</legend>
-                            <div class="am-form-group col-md-8">
-                                <label>车辆编号</label>
-                            </div>
-                            <input type="number" class="am-form-field am-radius" id="bikeId" placeholder="输入车辆编号">
-                        </fieldset>
-                        <button type="button" class="am-btn am-btn-default am-u-sm-2" id="summit">查询</button>
-                    </form>
+                    <div class="am-u-lg-4" style="text-align: center">
+                        <label >车辆类型</label >
+                        <select class=" am-input-sm" id="kind1">
+                            <option value="0">自行车</option>
+                            <option value="1">电动车</option>
+                        </select>
+                    </div>
+                    <div class="am-u-lg-4" style="text-align: center">
+                        <label >车辆状态</label>
+                        <select class=" am-input-sm" id="kind2">
+                            <option value="0">正在待修</option>
+                            <option value="1">正在使用</option>
+                            <option value="2">正在被用</option>
+                            <option value="3">已被预约</option>
+                        </select>
+                    </div>
+                    <div class="am-u-lg-4" style="text-align: center">
+                        <label >车辆供应商</label>
+                        <select class=" am-input-sm" id="kind3">
+                            <option value="0">江南皮革厂</option>
+                            <option value="1">天工大</option>
+                            <option value="3">捷安特</option>
+                        </select>
+                        </select>
+                    </div>
                 </div>
             </div>
             <div class="tpl-alert">

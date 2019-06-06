@@ -188,7 +188,13 @@ public class UserServiceImp implements UserService {
         }
         if(b.getState() == 0){
             return 0;
-        }else{
+        }else if(b.getState() == 1){
+            return -2;
+        }else if(b.getState() == 2){
+            return -3;
+        }else if(b.getState() == 3){
+            return -4;
+        }else {
             return bikeMapper.changBikeStateById(bikeId,0);
         }
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>查看维修记录</title>
+    <title>SB共享单车</title>
     <meta name="description" content="这是一个 index 页面">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -150,7 +150,25 @@
                         <li>
                             <a href="AdminFindAllUser">
                                 <i class="am-icon-angle-right"></i>
-                                <span>用户信息管理</span>
+                                <span>查看用户列表</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminFindAllUser">
+                                <i class="am-icon-angle-right"></i>
+                                <span>查询用户信息</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminFindAllUser">
+                                <i class="am-icon-angle-right"></i>
+                                <span>添加维修员</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminFindAllUser">
+                                <i class="am-icon-angle-right"></i>
+                                <span>修改用户信息</span>
                             </a>
                         </li>
                     </ul>
@@ -271,14 +289,13 @@
                             '<td style="text-align: center">' + data.repairDate + '</td>' +
                             '<td style="text-align: center">' + data.finshDate + '</td>' +
                             '<td style="text-align: center">' +
-                            '<div class="am-btn-toolbar" style="text-align: center">' +
-                            '<div class="am-btn-group am-btn-group-xs">' +
+                            '<div class="am-btn-group am-btn-group-xs" style="text-align: center">' +
                             '<button class="am-btn am-btn-default am-btn-xs am-text-secondary am-round">' +
                             '<span class="am-icon-pencil-square-o"> 编辑</span>' +
                             '</button>' +
                             '<button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only am-round">' +
                             '<span class="am-icon-trash-o">删除</span>' +
-                            '</button></div></div></td>' +
+                            '</button></div></td>' +
                             '</tr>'
                         );
                     });

@@ -60,6 +60,26 @@ public class UserController {
             return "0";
         }
     }
+    @RequestMapping(value = "/reportRepair")
+    @ResponseBody
+    public String reportRepair(@RequestBody JSONObject data){
+        int a =  userServiceImp.reportRepair(data.getInteger("bikeId"));
+        String msg;
+        if(a == -1){
+            msg = "不存在该车辆";
+        }else if(a == 0){
+            msg = "该车已被报修";
+        }else if(a == -2){
+            msg = "该车正在维修";
+        }else if(a == -3){
+            msg = "该车正在使用";
+        }else if(a == -4){
+            msg = "该车已被预约";
+        }else{
+            msg = "报修成功";
+        }
+        return msg;
+    }
     @RequestMapping(value = "/findUsingBike")
     @ResponseBody
     public Map<String,Object> findUsingBike(HttpSession session){
