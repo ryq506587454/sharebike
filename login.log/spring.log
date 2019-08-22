@@ -28,3 +28,146 @@
 2019-06-05 14:20:59.601  INFO 4540 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 36 ms
 2019-06-05 14:21:25.521  INFO 4540 --- [http-nio-8090-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2019-06-05 14:21:26.103  INFO 4540 --- [http-nio-8090-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-08-22 15:13:01.470  INFO 10392 --- [main] com.ryq.sharebike.AdminBusTest           : Starting AdminBusTest on 专属G7 with PID 10392 (started by 50658 in F:\java_project\sharebike)
+2019-08-22 15:13:01.471  INFO 10392 --- [main] com.ryq.sharebike.AdminBusTest           : No active profile set, falling back to default profiles: default
+2019-08-22 15:13:02.017  WARN 10392 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-08-22 15:13:02.017  WARN 10392 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-08-22 15:13:02.017  WARN 10392 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-08-22 15:13:02.017  WARN 10392 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-08-22 15:13:02.017  WARN 10392 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-08-22 15:13:02.031  WARN 10392 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-08-22 15:13:02.031  WARN 10392 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-08-22 15:13:02.031  WARN 10392 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-08-22 15:13:02.031  WARN 10392 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-08-22 15:13:02.031  WARN 10392 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-08-22 15:13:03.154  INFO 10392 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-22 15:13:03.330  WARN 10392 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-08-22 15:13:03.370  INFO 10392 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-08-22 15:13:03.657  INFO 10392 --- [main] com.ryq.sharebike.AdminBusTest           : Started AdminBusTest in 2.56 seconds (JVM running for 4.486)
+2019-08-22 15:13:03.865  INFO 10392 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-08-22 15:13:05.967 ERROR 10392 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.16.jar:8.0.16]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.16.jar:8.0.16]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835) ~[mysql-connector-java-8.0.16.jar:8.0.16]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455) ~[mysql-connector-java-8.0.16.jar:8.0.16]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240) ~[mysql-connector-java-8.0.16.jar:8.0.16]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.16.jar:8.0.16]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.3.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353) ~[HikariCP-3.3.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-3.3.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473) [HikariCP-3.3.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562) [HikariCP-3.3.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.3.1.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-3.3.1.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157) [spring-jdbc-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115) [spring-jdbc-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78) [spring-jdbc-5.2.0.M2.jar:5.2.0.M2]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:82) [mybatis-spring-2.0.1.jar:2.0.1]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:68) [mybatis-spring-2.0.1.jar:2.0.1]
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336) [mybatis-3.5.1.jar:3.5.1]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:85) [mybatis-3.5.1.jar:3.5.1]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62) [mybatis-3.5.1.jar:3.5.1]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324) [mybatis-3.5.1.jar:3.5.1]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) [mybatis-3.5.1.jar:3.5.1]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) [mybatis-3.5.1.jar:3.5.1]
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:143) [pagehelper-5.1.4.jar:na]
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61) [mybatis-3.5.1.jar:3.5.1]
+	at com.sun.proxy.$Proxy105.query(Unknown Source) [na:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) [mybatis-3.5.1.jar:3.5.1]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140) [mybatis-3.5.1.jar:3.5.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433) [mybatis-spring-2.0.1.jar:2.0.1]
+	at com.sun.proxy.$Proxy78.selectList(Unknown Source) [na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230) [mybatis-spring-2.0.1.jar:2.0.1]
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147) [mybatis-3.5.1.jar:3.5.1]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80) [mybatis-3.5.1.jar:3.5.1]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58) [mybatis-3.5.1.jar:3.5.1]
+	at com.sun.proxy.$Proxy85.getUser(Unknown Source) [na:na]
+	at com.ryq.sharebike.serviceImp.AdminServiceImp.findUser(AdminServiceImp.java:80) [classes/:na]
+	at com.ryq.sharebike.AdminBusTest.findUser(AdminBusTest.java:62) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74) [spring-test-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84) [spring-test-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-5.2.0.M2.jar:5.2.0.M2]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) [spring-test-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.2.0.M2.jar:5.2.0.M2]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.2.0.M2.jar:5.2.0.M2]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.2.0.M2.jar:5.2.0.M2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.2.0.M2.jar:5.2.0.M2]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115) [junit-4.12.jar:4.12]
+	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:40) [junit-vintage-engine-5.4.2.jar:5.4.2]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:1.8.0_77]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_77]
+	at java.util.Iterator.forEachRemaining(Iterator.java:116) ~[na:1.8.0_77]
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) ~[na:1.8.0_77]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481) ~[na:1.8.0_77]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471) ~[na:1.8.0_77]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:1.8.0_77]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:1.8.0_77]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:1.8.0_77]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418) ~[na:1.8.0_77]
+	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80) ~[junit-vintage-engine-5.4.2.jar:5.4.2]
+	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:71) ~[junit-vintage-engine-5.4.2.jar:5.4.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229) ~[junit-platform-launcher-1.4.2.jar:1.4.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197) ~[junit-platform-launcher-1.4.2.jar:1.4.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211) ~[junit-platform-launcher-1.4.2.jar:1.4.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191) ~[junit-platform-launcher-1.4.2.jar:1.4.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.4.2.jar:1.4.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:74) ~[junit5-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) ~[junit-rt.jar:na]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_77]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_77]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.16.jar:8.0.16]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.16.jar:8.0.16]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.16.jar:8.0.16]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.16.jar:8.0.16]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91) ~[mysql-connector-java-8.0.16.jar:8.0.16]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:152) ~[mysql-connector-java-8.0.16.jar:8.0.16]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955) ~[mysql-connector-java-8.0.16.jar:8.0.16]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-java-8.0.16.jar:8.0.16]
+	... 88 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_77]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_77]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_77]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_77]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_77]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_77]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_77]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_77]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155) ~[mysql-connector-java-8.0.16.jar:8.0.16]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65) ~[mysql-connector-java-8.0.16.jar:8.0.16]
+	... 91 common frames omitted
+
+2019-08-22 15:13:06.029  INFO 10392 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
