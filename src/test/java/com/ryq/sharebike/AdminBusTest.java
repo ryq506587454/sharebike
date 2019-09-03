@@ -62,7 +62,7 @@ public class AdminBusTest {
         List<User> users = adminServiceImp.findUser(new User(0, null, null, -1, 1));
         if (users == null || users.size() == 0) {
             System.out.println("没有使用用户");
-            
+
         } else {
             for (User user : users) {
                 System.out.println(user);
