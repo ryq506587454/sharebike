@@ -1,57 +1,26 @@
-2019-06-05 14:20:47.203  INFO 4540 --- [restartedMain] com.ryq.sharebike.SharebikeApplication   : Starting SharebikeApplication on 专属的G7 with PID 4540 (D:\idea_project\sharebike\target\classes started by 专属的G7 in D:\idea_project\sharebike)
-2019-06-05 14:20:47.234  INFO 4540 --- [restartedMain] com.ryq.sharebike.SharebikeApplication   : No active profile set, falling back to default profiles: default
-2019-06-05 14:20:47.437  INFO 4540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-06-05 14:20:47.437  INFO 4540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-06-05 14:20:49.000  WARN 4540 --- [restartedMain] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
-2019-06-05 14:20:49.000  WARN 4540 --- [restartedMain] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
-2019-06-05 14:20:49.000  WARN 4540 --- [restartedMain] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
-2019-06-05 14:20:49.000  WARN 4540 --- [restartedMain] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
-2019-06-05 14:20:49.000  WARN 4540 --- [restartedMain] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
-2019-06-05 14:20:49.032  WARN 4540 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
-2019-06-05 14:20:49.032  WARN 4540 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
-2019-06-05 14:20:49.032  WARN 4540 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
-2019-06-05 14:20:49.032  WARN 4540 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
-2019-06-05 14:20:49.032  WARN 4540 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
-2019-06-05 14:20:50.704  INFO 4540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
-2019-06-05 14:20:50.751  INFO 4540 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-06-05 14:20:50.751  INFO 4540 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
-2019-06-05 14:20:51.001  INFO 4540 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-06-05 14:20:51.001  INFO 4540 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3564 ms
-2019-06-05 14:20:52.876  INFO 4540 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-06-05 14:20:53.360  WARN 4540 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-06-05 14:20:53.423  INFO 4540 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2019-06-05 14:20:55.013  INFO 4540 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-06-05 14:20:55.142  INFO 4540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
-2019-06-05 14:20:55.150  INFO 4540 --- [restartedMain] com.ryq.sharebike.SharebikeApplication   : Started SharebikeApplication in 9.432 seconds (JVM running for 15.318)
-2019-06-05 14:20:59.561  INFO 4540 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-06-05 14:20:59.565  INFO 4540 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-06-05 14:20:59.601  INFO 4540 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 36 ms
-2019-06-05 14:21:25.521  INFO 4540 --- [http-nio-8090-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-06-05 14:21:26.103  INFO 4540 --- [http-nio-8090-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-08-22 15:13:01.470  INFO 10392 --- [main] com.ryq.sharebike.AdminBusTest           : Starting AdminBusTest on 专属G7 with PID 10392 (started by 50658 in F:\java_project\sharebike)
-2019-08-22 15:13:01.471  INFO 10392 --- [main] com.ryq.sharebike.AdminBusTest           : No active profile set, falling back to default profiles: default
-2019-08-22 15:13:02.017  WARN 10392 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
-2019-08-22 15:13:02.017  WARN 10392 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
-2019-08-22 15:13:02.017  WARN 10392 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
-2019-08-22 15:13:02.017  WARN 10392 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
-2019-08-22 15:13:02.017  WARN 10392 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
-2019-08-22 15:13:02.031  WARN 10392 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
-2019-08-22 15:13:02.031  WARN 10392 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
-2019-08-22 15:13:02.031  WARN 10392 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
-2019-08-22 15:13:02.031  WARN 10392 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
-2019-08-22 15:13:02.031  WARN 10392 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
-2019-08-22 15:13:03.154  INFO 10392 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-22 15:13:03.330  WARN 10392 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-08-22 15:13:03.370  INFO 10392 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2019-08-22 15:13:03.657  INFO 10392 --- [main] com.ryq.sharebike.AdminBusTest           : Started AdminBusTest in 2.56 seconds (JVM running for 4.486)
-2019-08-22 15:13:03.865  INFO 10392 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-08-22 15:13:05.967 ERROR 10392 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+2019-09-06 15:17:01.729  INFO 10784 --- [main] com.ryq.sharebike.AdminBusTest           : Starting AdminBusTest on 专属G7 with PID 10784 (started by 50658 in F:\java_project\sharebike)
+2019-09-06 15:17:01.752  INFO 10784 --- [main] com.ryq.sharebike.AdminBusTest           : No active profile set, falling back to default profiles: default
+2019-09-06 15:17:02.833  WARN 10784 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-09-06 15:17:02.833  WARN 10784 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-09-06 15:17:02.834  WARN 10784 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-09-06 15:17:02.834  WARN 10784 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-09-06 15:17:02.834  WARN 10784 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-09-06 15:17:02.847  WARN 10784 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'bikeMapper' and 'com.ryq.sharebike.dao.BikeMapper' mapperInterface. Bean already defined with the same name!
+2019-09-06 15:17:02.848  WARN 10784 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'repairMapper' and 'com.ryq.sharebike.dao.RepairMapper' mapperInterface. Bean already defined with the same name!
+2019-09-06 15:17:02.848  WARN 10784 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'statisticMapper' and 'com.ryq.sharebike.dao.StatisticMapper' mapperInterface. Bean already defined with the same name!
+2019-09-06 15:17:02.848  WARN 10784 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.ryq.sharebike.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-09-06 15:17:02.848  WARN 10784 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ryq.sharebike]' package. Please check your configuration.
+2019-09-06 15:17:04.578  INFO 10784 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-06 15:17:04.825  WARN 10784 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-09-06 15:17:04.890  INFO 10784 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-09-06 15:17:05.245  INFO 10784 --- [main] com.ryq.sharebike.AdminBusTest           : Started AdminBusTest in 4.426 seconds (JVM running for 6.28)
+2019-09-06 15:17:05.660  INFO 10784 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-06 15:17:05.957 ERROR 10784 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
 
-com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.16.jar:8.0.16]
+java.sql.SQLSyntaxErrorException: Unknown database 'sharebike'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.16.jar:8.0.16]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.16.jar:8.0.16]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.16.jar:8.0.16]
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835) ~[mysql-connector-java-8.0.16.jar:8.0.16]
 	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455) ~[mysql-connector-java-8.0.16.jar:8.0.16]
 	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240) ~[mysql-connector-java-8.0.16.jar:8.0.16]
@@ -76,7 +45,7 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) [mybatis-3.5.1.jar:3.5.1]
 	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:143) [pagehelper-5.1.4.jar:na]
 	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61) [mybatis-3.5.1.jar:3.5.1]
-	at com.sun.proxy.$Proxy105.query(Unknown Source) [na:na]
+	at com.sun.proxy.$Proxy104.query(Unknown Source) [na:na]
 	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) [mybatis-3.5.1.jar:3.5.1]
 	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140) [mybatis-3.5.1.jar:3.5.1]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
@@ -84,12 +53,12 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433) [mybatis-spring-2.0.1.jar:2.0.1]
-	at com.sun.proxy.$Proxy78.selectList(Unknown Source) [na:na]
+	at com.sun.proxy.$Proxy77.selectList(Unknown Source) [na:na]
 	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230) [mybatis-spring-2.0.1.jar:2.0.1]
 	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147) [mybatis-3.5.1.jar:3.5.1]
 	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80) [mybatis-3.5.1.jar:3.5.1]
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58) [mybatis-3.5.1.jar:3.5.1]
-	at com.sun.proxy.$Proxy85.getUser(Unknown Source) [na:na]
+	at com.sun.proxy.$Proxy84.getUser(Unknown Source) [na:na]
 	at com.ryq.sharebike.serviceImp.AdminServiceImp.findUser(AdminServiceImp.java:80) [classes/:na]
 	at com.ryq.sharebike.AdminBusTest.findUser(AdminBusTest.java:62) [test-classes/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
@@ -118,56 +87,9 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
 	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.2.0.M2.jar:5.2.0.M2]
 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115) [junit-4.12.jar:4.12]
-	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:40) [junit-vintage-engine-5.4.2.jar:5.4.2]
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:1.8.0_77]
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_77]
-	at java.util.Iterator.forEachRemaining(Iterator.java:116) ~[na:1.8.0_77]
-	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) ~[na:1.8.0_77]
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481) ~[na:1.8.0_77]
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471) ~[na:1.8.0_77]
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:1.8.0_77]
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:1.8.0_77]
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:1.8.0_77]
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418) ~[na:1.8.0_77]
-	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80) ~[junit-vintage-engine-5.4.2.jar:5.4.2]
-	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:71) ~[junit-vintage-engine-5.4.2.jar:5.4.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229) ~[junit-platform-launcher-1.4.2.jar:1.4.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197) ~[junit-platform-launcher-1.4.2.jar:1.4.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211) ~[junit-platform-launcher-1.4.2.jar:1.4.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191) ~[junit-platform-launcher-1.4.2.jar:1.4.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.4.2.jar:1.4.2]
-	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:74) ~[junit5-rt.jar:na]
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) ~[junit-rt.jar:na]
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) ~[junit-rt.jar:na]
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) ~[junit-rt.jar:na]
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
 
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_77]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_77]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_77]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_77]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.NativeSession.connect(NativeSession.java:152) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	... 88 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_77]
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_77]
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_77]
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_77]
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_77]
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_77]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_77]
-	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_77]
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	... 91 common frames omitted
-
-2019-08-22 15:13:06.029  INFO 10392 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-06 15:17:06.000  INFO 10784 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
