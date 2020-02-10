@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ryq.sharebike.dao.UserMapper">
+    <resultMap type="com.ryq.sharebike.pojo.User" id="userInfo">
+        <id column="userId" property="userId"/>
+        <result column="userName" property="userName"/>
+        <result column="password" property="password"/>
+        <result column="phone" property="phone"/>
+        <result column="password" property="password"/>
+        <result column="balance" property="balance"/>
+        <result column="state" property="state"/>
+        <result column="grade" property="grade"/>
+        <result column="registerDate" property="registerDate"/>
+    </resultMap>
+    <resultMap type="com.ryq.sharebike.pojo.Bike" id="bikeInfo">
+        <id column="bikeId" property="bikeId"/>
+        <result column="state" property="state"/>
+        <result column="number" property="number"/>
+        <result property="startTime" column="startTime"/>
+        <result property="serviceTime" column="serviceTime"/>
+        <association property="type" javaType="com.ryq.sharebike.pojo.BikeType">
+            <id property="typeId" column="typeId"/>
+            <result property="kind" column="kind"/>
+            <result property="supplier" column="supplier"/>
+            <result column="number" property="number"/>
+        </association>
+    </resultMap>
+    <!-- User Login(@Param("User") User user)-->
+    <select id="Login" resultMap="userInfo" parameterType="com.ryq.sharebike.pojo.User">
+        select * from user where user.phone = #{User.phone} and user.password = #{User.password};
+    </select>
+    <!-- int Register(@Param("User") User user) -->
+    <insert id="Register" parameterType="com.ryq.sharebike.pojo.User">
+        insert into user(userName, phone, password, balance, state, grade, registerDate)
+        VALUE (#{User.userName},#{User.phone},#{User.password},0.0,#{User.state},#{User.grade},#{User.registerDate});
+    </insert>
+    <!--List<User> getUser(@Param("findUser") User User);-->
+    <select id="getUser" resultMap="userInfo" parameterType="com.ryq.sharebike.pojo.User">
+        select * from user
+        <where>
+            <if test="findUser.userId != 0">
+                userId = #{findUser.userId}
+            </if>
+            <if test="findUser.phone != null">
+                phone = #{findUser.phone}
+            </if>
+            <if test="findUser.grade != -1">
+                grade = #{findUser.grade}
+            </if>
+            <if test="findUser.userName != null">
+                userName = #{findUser.userName}
+            </if>
+            <if test="findUser.state != -1">
+                state = #{findUser.state}
+            </if>
+        </where>
+    </select>
+    <!-- int appointmentBike(@Param("userId") int userId,@Param("bikeId") int bikeId,@Param("startTime") Date date);-->
+    <insert id="appointmentBike">
+        insert into appointment_record(bikeId, userId, startTime) value (#{bikeId},#{userId},#{startTime});
+    </insert>
+    <!-- int changUserStateById(@Param("userId") int id, @Param("state") int state);-->
+    <update id="changUserStateById" parameterType="int">
+        update user set state = #{state} where userId = #{userId};
+    </update>
+    <!-- int useBike(@Param("userId") int userId,@Param("bikeId") int bikeId,@Param("borrowDate") Date date);-->
+    <insert id="useBike">
+        insert into use_bike(userId, bikeId, borrowDate) value (#{userId},#{bikeId},#{borrowDate});
+    </insert>
+    <!-- Integer checkNoBack(@Param("userId") int userId);-->
+    <select id="checkNoBack" resultType="java.lang.Integer">
+    SELECT
+	b.bikeId
+    FROM
+        use_bike AS ub
+    RIGHT JOIN bike AS b ON b.bikeId = ub.bikeId
+    WHERE
+        ub.userId = #{userId}
+    AND ub.backDate IS NULL
+    AND ub.money IS NULL
+    </select>
+    <!-- int changUserBalanceById(@Param("userId") int id, @Param("balance") int balance);-->
+    <update id="changUserBalanceById">
+        update user set balance = #{balance} where userId = #{userId};
+    </update>
+    <!-- Date checkBorrowTime(@Param("userId") int userId);-->
+    <select id="checkBorrowTime" resultType="java.util.Date">
+    SELECT
+    ub.borrowDate
+    FROM
+        use_bike AS ub
+    WHERE
+        ub.userId = #{userId}
+    AND ub.backDate IS NULL
+    AND ub.money IS NULL
+    </select>
+    <!-- int addBackBikeRecordById(@Param("userId") int userId,@Param("backTime") Date backTime, @Param("money") float money); -->
+    <update id="addBackBikeRecordById">
+        update use_bike
+        set backDate = #{backTime},money = #{money}
+        where userId = #{userId}
+        AND backDate IS NULL
+        AND money IS NULL
+    </update>
+    <!--Integer checkAppointmenting(@Param("userId") int userId);-->
+    <select id="checkAppointmenting" resultType="java.lang.Integer">
+        SELECT
+          bikeId
+        FROM
+            appointment_record
+        WHERE
+            userId = #{userId}
+        AND endTime IS NULL
+    </select>
+    <!--int addFinshAppointment(@Param("userId") int userId,@Param("endTime") Date endTime)-->
+    <update id="addFinshAppointment">
+        update appointment_record
+        set endTime = #{endTime}
+        where userId = #{userId}
+        AND endTime IS NULL
+    </update>
+    <!--int addPayRecord(@Param("userId") int id,@Param("payDate") Date payDate, @Param("money") float money);-->
+    <insert id="addPayRecord">
+        insert into payment_record (userId, money, payDate) values (#{userId},#{money},#{payDate});
+    </insert>
+    <!--int addRechargeRecord(@Param("userId") int userId,@Param("rechargeTime") Date rechargeTime, @Param("money") float money);-->
+    <insert id="addRechargeRecord">
+        insert into recharge_record (userId,rechargeDate,money) values (#{userId},#{rechargeTime},#{money});
+    </insert>
+    <!--List<RechargeRecord> findRechargeRecord(@Param("userId") int userId);-->
+    <select id="findRechargeRecord" resultType="com.ryq.sharebike.pojo.RechargeRecord">
+        select *
+        from recharge_record
+        where userId = #{userId}
+    </select>
+    <!--List<PaymentRecord> findPaymentRecord(@Param("userId") int userId);-->
+    <select id="findPaymentRecord" resultType="com.ryq.sharebike.pojo.PaymentRecord">
+        select *
+        from payment_record
+        where userId = #{userId}
+    </select>
+    <!--List<UseBike> findUseRecord(@Param("userId") int userId);-->
+    <select id="findUseRecord" resultType="com.ryq.sharebike.pojo.UseBike">
+        select * from use_bike where userId = #{userId} and backDate is not null
+    </select>
+    <!--User findUserByPhone(@Param("phone") int phone);-->
+    <select id="findUserByPhone" resultMap="userInfo">
+        select * from user where phone = #{phone};
+    </select>
+    <!--UseBike findUseingBike(@Param("userId") int userId);-->
+    <select id="findUseingBike" resultType="com.ryq.sharebike.pojo.UseBike">
+        select * from use_bike where userId = #{userId} and backDate is null ;
+    </select>
+</mapper>

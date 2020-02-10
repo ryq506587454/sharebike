@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ryq.sharebike.dao.BikeMapper">
+    <resultMap type="com.ryq.sharebike.pojo.User" id="userInfo">
+        <id column="userId" property="userId"/>
+        <result column="userName" property="userName"/>
+        <result column="password" property="password"/>
+        <result column="phone" property="phone"/>
+        <result column="password" property="password"/>
+        <result column="balance" property="balance"/>
+        <result column="state" property="state"/>
+        <result column="grade" property="grade"/>
+        <result column="registerDate" property="registerDate"/>
+    </resultMap>
+    <resultMap type="com.ryq.sharebike.pojo.Bike" id="bikeInfo">
+        <id column="bikeId" property="bikeId"/>
+        <result column="state" property="state"/>
+        <result property="startTime" column="startTime"/>
+        <result property="serviceTime" column="serviceTime"/>
+        <association property="type" javaType="com.ryq.sharebike.pojo.BikeType">
+            <id property="typeId" column="typeId"/>
+            <result property="kind" column="kind"/>
+            <result property="supplier" column="supplier"/>
+            <result column="number" property="number"/>
+        </association>
+    </resultMap>
+    <!-- public Bike getBikeById(@Param("id") int id);-->
+    <select id="getBikeById" resultMap="bikeInfo" parameterType="int">
+        select * from bike as b , bike_type as bt where b.typeId = bt.typeId and b.bikeId = #{id};
+    </select>
+    <!-- public int changBikeStateById(@Param("bikeId") int bikeId,@Param("state") int state);-->
+    <update id="changBikeStateById" parameterType="int">
+        update bike set state = #{state} where bike.bikeId = #{bikeId};
+    </update>
+    <!--public int changBikeNumberByBikeId(@Param("bikeId") int bikeId,@Param("number") int number);-->
+    <update id="changBikeNumberByBikeId">
+       UPDATE bike_type bt JOIN bike b ON bt.typeId = b.typeId
+       SET number = #{number}
+       WHERE b.bikeId = #{bikeId}
+    </update>
+    <!--List<Bike> findBikeByState(@Param("state") int state);-->
+    <select id="findBikeByState" resultMap="bikeInfo">
+    select * from bike as b,bike_type as bt where b.state = #{state} and b.typeId = bt.typeId
+    </select>
+    <!--int addBike(@Param("bike")Bike bike,@Param("typeId")int typeId);-->
+    <insert id="addBike">
+        insert into bike (state, startTime, serviceTime, typeId) values (#{bike.state},#{bike.startTime},#{bike.serviceTime},#{typeId});
+    </insert>
+    <!--BikeType findBikeType(@Param("typeId")int typeId);-->
+    <select id="findBikeType" resultType="com.ryq.sharebike.pojo.BikeType">
+      select * from bike_type
+        <where>
+            <if test="typeId != 0">
+                typeId = #{typeId}
+            </if>
+        </where>
+    </select>
+    <!--int changBikeNumberByTypeId(@Param("typeId")int typeId,@Param("number")int number);-->
+    <update id="changBikeNumberByTypeId">
+        update bike_type set number = #{number} where typeId = #{typeId};
+    </update>
+    <!--int addBikeType(@Param("bikeType") BikeType bikeType);-->
+    <insert id="addBikeType" parameterType="com.ryq.sharebike.pojo.BikeType">
+        insert into bike_type (supplier, kind, number) values (#{bikeType.supplier},#{bikeType.kind},0);
+    </insert>
+    <!--BikeType findBikeTypeByDetil(@Param("bikeType")BikeType bikeType);-->
+    <select id="findBikeTypeByDetil" resultType="com.ryq.sharebike.pojo.BikeType" parameterType="com.ryq.sharebike.pojo.BikeType">
+        select * from bike_type where supplier = #{bikeType.supplier} and kind = #{bikeType.kind};
+    </select>
+    <!--List<Bike> findAllBike();-->
+    <select id="findAllBike" resultMap="bikeInfo">
+        select *
+        from bike as b,bike_type as bt
+        where b.typeId = bt.typeId
+    </select>
+</mapper>

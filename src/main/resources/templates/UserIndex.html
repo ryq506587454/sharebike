@@ -1,0 +1,153 @@
+<!doctype html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SB共享单车</title>
+    <meta name="description" content="这是一个 index 页面">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="icon" type="image/png" href="assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+    <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script src="assets/js/echarts.min.js"></script>
+</head>
+
+<body data-type="index" th:inline="text">
+
+<header class="am-topbar am-topbar-inverse admin-header">
+    <div class="am-topbar-brand">
+        <a href="javascript:;" class="tpl-logo">
+            <img src="assets/img/logo.png" alt="">
+        </a>
+    </div>
+    <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+
+    </div>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
+            data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span
+            class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+        <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
+
+            <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+                    <span class="tpl-header-list-user-nick" id="userName">none</span><span
+                        class="tpl-header-list-user-ico"> <img src="assets/img/user01.png"></span>
+                </a>
+            </li>
+            <li><a id = "quit" class="tpl-header-list-link"><span class="am-icon-sign-out tpl-header-list-ico-out-size"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<div class="tpl-page-container tpl-page-header-fixed">
+    <!--
+作者：506587454@qq.com
+时间：2019-05-26
+描述：左侧开始
+-->
+    <div class="tpl-left-nav tpl-left-nav-hover">
+        <div class="tpl-left-nav-title" style="font-size: 16px;margin-bottom: 15px;margin-top: -10px;">
+            ShareBike
+        </div>
+        <div class="tpl-left-nav-list">
+            <ul class="tpl-left-nav-menu">
+                <li class="tpl-left-nav-item">
+                    <a href="UserIndex" class="nav-link active">
+                        <i class="am-icon-home"></i>
+                        <span>首页</span>
+                    </a>
+                </li>
+                <li class="tpl-left-nav-item">
+                    <a href="UserUseBike" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-car"></i>
+                        <span>使用车辆</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                </li>
+                <li class="tpl-left-nav-item">
+                    <a href="UserAppointBike" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-bell"></i>
+                        <span>预约车辆</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                </li>
+                <li class="tpl-left-nav-item">
+                    <a href="UserRechare" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-money"></i>
+                        <span>充值</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                </li>
+                <li class="tpl-left-nav-item">
+                    <a href="UserInfo" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-child"></i>
+                        <span>查看个人信息</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--
+    作者：506587454@qq.com
+    时间：2019-05-26
+    描述：左侧结束
+-->
+    <div class="tpl-content-wrapper">
+        <div class="tpl-content-page-title">
+            ShareBike后台管理
+        </div>
+        <ol class="am-breadcrumb">
+            <li><a href="index" class="am-icon-home">首页</a></li>
+        </ol>
+        <div class="tpl-content-scope">
+            <div class="note note-info">
+                <h3>ShareBike 科技 </h3>
+                <p>
+                    ShareBike小黑车是全球领先的无桩共享单车平台。用户可通过手机解锁自行车，享受随时随地有车骑的共享出行服务。更好骑的共享单车，领先的移动物联网智能锁，全球领先的人工智能大数据平台“虫洞”系统。ShareBike小黑车建立起从用户舒适骑行到以物联网为载体、人工智能为核心的科技闭环。</p>
+                <h3>ShareBike 全球化</h3>
+                <p> ShareBike在全球21个国家超过250座城市提供服务。其中海外运营城市超过50座，投放超过10万辆共享单车，为海外用户累计提供超过1000万次骑行服务。目前，ShareBike
+                    在海外由当地用户贡献的订单占比已超过99%，优秀的产品、技术和运营实力，让ShareBike受到越来越多国家的认可，成为真正服务全球的共享单车平台。</p>
+                <h3>ShareBike 社会责任</h3>
+                <p>
+                    ShareBike致力于倡导绿色出行理念，通过整合自行车产能及供应链，在全球推广共享单车的出行理念，为各大城市提供便捷高效的绿色出行服务，满足用户的美好生活需要，同时推动自行车行业转型升级、打造城市绿色交通体系、提升城市出行效率，助力信用城市、智慧城市建设。</p>
+                <h3>ShareBike 政府合作</h3>
+                <p>
+                    ShareBike自进入城市以来，先后与全国众多城市政府及管理部门深入合作，为当地城市交通及经济发展贡献力量。通过良好的沟通机制,ShareBike与各地政府共同探索政企共治的共享单车运营管理模式，描绘新时代下智慧城市的发展蓝图。ShareBike
+                    与城市管理部门的合作模式,成为城市创新治理的新样本。</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="js/my.js" th:inline="javascript"></script>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    var user = /*[[${session.user}]]*/ null;
+    if (user == null) {
+        alert("请先登录");
+        window.location.href = "login"
+    } else {
+        $('#userName').text(user.userName);
+    }
+    /*]]>*/
+</script>
+
+</body>
+
+</html>
